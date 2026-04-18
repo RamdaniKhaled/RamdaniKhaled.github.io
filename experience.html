@@ -12,63 +12,59 @@
         <div class="name">Ramdani Khaled</div>
         <div class="title">SRE & DevOps Engineer</div>
         <div class="subtitle">Infrastructure • Automation • Cloud • Master IRS - Paris Saclay</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
+            <a href="experience.html">Expérience</a>
+            <a href="projects.html">Projets</a>
+            <a href="skills.html">Compétences</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <section id="experience">
-            <h2>Parcours & Expérience Professionnelle</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 1.05em;">
-                Un aperçu de mon évolution dans les domaines de l'infrastructure, DevOps et systèmes d'information.
-            </p>
+            <h2>Expérience Professionnelle</h2>
             <div class="experience-timeline">
                 <!-- Dynamically loaded from data.json -->
             </div>
         </section>
 
         <section id="journey">
-            <h2>Mon Évolution</h2>
-            <div class="about-text">
-                <p>
-                    Mon parcours a commencé avec une <span class="highlight">Licence en Informatique</span>, où j'ai acquis les fondamentaux en programmation, réseaux et systèmes. Mais c'est vraiment lors de mes premières expériences en tant qu'<span class="highlight">Administrateur Système Junior</span> que j'ai découvert ma passion pour l'infrastructure.
+            <h2>Mon Parcours</h2>
+            <div style="max-width: 900px; margin: 40px auto; background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2; margin-bottom: 20px;">
+                    Mon expérience professionnelle a commencé par une licence en informatique, où j'ai acquis les fondamentaux. Ensuite, j'ai eu l'opportunité d'intégrer des environnements professionnels en tant qu'administrateur système junior, ce qui m'a permis de maîtriser l'administration Linux et la gestion d'infrastructure.
                 </p>
-                <p>
-                    Là, j'ai appris à gérer des serveurs Linux, configurer des firewalls, mettre en place du monitoring avec des outils open-source. Cette expérience m'a donné une base solide dans l'administration système.
+                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2; margin-bottom: 20px;">
+                    Rapidement, j'ai découvert ma passion pour l'automatisation et le DevOps. Mon stage DevOps m'a permis de mettre en place des pipelines CI/CD complets, d'explorer Kubernetes et d'approfondir mes connaissances en Infrastructure as Code. Actuellement, en Master IRS, je consolide mes acquis tout en explorant des domaines plus avancés comme le service mesh et la sécurité des infrastructures cloud.
                 </p>
-                <p>
-                    Ensuite, mon stage en tant que <span class="highlight">DevOps Engineer</span> a été décisif. C'est là que j'ai vraiment compris la philosophie DevOps. J'ai mis en place des infrastructures Docker, créé des pipelines CI/CD avec GitLab CI, automatisé le provisioning avec Ansible. C'est là que tout a cliqué - l'infrastructure devait être code, automatisée, testée.
-                </p>
-                <p>
-                    Aujourd'hui, en Master IRS, je pousse plus loin. Je explore Kubernetes, l'Infrastructure as Code avec Terraform, l'observabilité avec Prometheus et Grafana, et je consolidate ma compréhension des architectures cloud-native modernes.
+                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2;">
+                    Mon objectif est de devenir un ingénieur SRE/DevOps senior capable de concevoir et de déployer des infrastructures hautement disponibles, sécurisées et auto-cicatrisantes.
                 </p>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Intéressé?</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 20px; font-size: 1.05em;">
-                Vous avez une opportunité ou une question sur mon expérience? Contactez-moi.
-            </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">💼 GitHub</p>
-                    <a href="https://github.com/RamdaniKhaled" target="_blank">RamdaniKhaled</a>
-                </div>
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">📧 Email</p>
-                    <a href="mailto:khaled.ramdani@example.com">khaled.ramdani@example.com</a>
-                </div>
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">🔗 LinkedIn</p>
-                    <a href="https://linkedin.com" target="_blank">Ramdani Khaled</a>
-                </div>
+        <section id="cta">
+            <h2 style="text-align: center;">Voir Mes Projets</h2>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn btn-primary">❯ Mes Réalisations</a>
+                <a href="contact.html" class="btn btn-secondary">💬 Me Contacter</a>
             </div>
         </section>
     </main>

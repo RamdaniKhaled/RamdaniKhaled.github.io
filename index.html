@@ -12,13 +12,28 @@
         <div class="name">Ramdani Khaled</div>
         <div class="title">SRE & DevOps Engineer</div>
         <div class="subtitle">Infrastructure • Automation • Cloud • Master IRS - Paris Saclay</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
+            <a href="experience.html">Expérience</a>
+            <a href="projects.html">Projets</a>
+            <a href="skills.html">Compétences</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -46,7 +61,7 @@
         </section>
 
         <section id="highlights">
-            <h2>Faits Marquants</h2>
+            <h2>Projets Récents</h2>
             <div class="projects-grid">
                 <!-- 3 featured projects will be displayed here -->
             </div>
@@ -57,27 +72,13 @@
         </section>
 
         <section id="contact">
-            <h2>Travaillons Ensemble</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 20px; font-size: 1.05em;">
-                Je suis toujours ouvert pour discuter d'opportunités, de collaborations ou simplement de DevOps. Contactez-moi!
+            <h2>Restons en Contact</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 1.05em; line-height: 1.8;">
+                Vous avez un projet intéressant ? Des questions sur mon travail ou mes technologies préférées ? N'hésitez pas à me contacter. Je suis toujours ouvert aux discussions et aux collaborations.
             </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">💼 GitHub</p>
-                    <a href="https://github.com/RamdaniKhaled" target="_blank">RamdaniKhaled</a>
-                </div>
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">📧 Email</p>
-                    <a href="mailto:khaled.ramdani@example.com">khaled.ramdani@example.com</a>
-                </div>
-                <div class="contact-item">
-                    <p style="color: var(--text-light); margin-bottom: 10px;">🔗 LinkedIn</p>
-                    <a href="https://linkedin.com" target="_blank">Ramdani Khaled</a>
-                </div>
-            </div>
             <div class="cta-buttons">
-                <a href="https://github.com/RamdaniKhaled" class="btn btn-primary" target="_blank">❯ Voir mes projets GitHub</a>
-                <a href="mailto:khaled.ramdani@example.com" class="btn btn-secondary">✉ M'envoyer un message</a>
+                <a href="contact.html" class="btn btn-primary">💬 Me Contacter</a>
+                <a href="https://github.com/RamdaniKhaled" class="btn btn-secondary" target="_blank">❯ Voir sur GitHub</a>
             </div>
         </section>
     </main>
@@ -87,12 +88,17 @@
         <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
     </footer>
 
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"></div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-    <main class="container">
-        <section id="home">
             <h2>À Propos</h2>
             <div class="about-grid">
                 <div class="about-text">

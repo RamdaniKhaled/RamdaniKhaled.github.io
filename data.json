@@ -4,11 +4,13 @@
     "title": "SRE & DevOps Engineer",
     "subtitle": "Infrastructure • Automation • Cloud • Master IRS - Paris Saclay",
     "bio": "Passionné par les infrastructures modernes et l'automatisation, je suis un étudiant en Master IRS (Infrastructures et Réseaux de Systèmes) chez Paris Saclay avec une solide expérience pratique en DevOps.",
+    "about": "Je suis un ingénieur DevOps passionné par la création d'infrastructures robustes et scalables. J'aime automatiser les processus répétitifs et construire des pipelines CI/CD efficaces. Mes centres d'intérêt incluent Kubernetes, l'Infrastructure as Code, et les pratiques DevOps qui améliorent la collaboration entre équipes.",
+    "interests": "Cloud Computing, Kubernetes, Infrastructure as Code, CI/CD Automation, Linux, Sécurité Informatique, Open Source",
     "email": "khaled.ramdani@example.com",
     "github": "https://github.com/RamdaniKhaled",
     "linkedin": "https://linkedin.com"
   },
-  "experience": [
+  "education": [
     {
       "id": 1,
       "year": "2024 - Présent",
@@ -17,21 +19,23 @@
     },
     {
       "id": 2,
+      "year": "2022",
+      "title": "Licence Informatique",
+      "description": "Fondamentaux en programmation, réseaux et systèmes. Premiers pas dans l'administration Linux et la sécurité informatique."
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
       "year": "2023 - 2024",
       "title": "Stagiaire DevOps",
       "description": "Mise en place d'infrastructure Docker, création de pipelines CI/CD avec GitLab CI, automatisation du provisioning avec Ansible et scripts Bash."
     },
     {
-      "id": 3,
+      "id": 2,
       "year": "2022 - 2023",
       "title": "Administrateur Système Junior",
       "description": "Gestion de serveurs Linux (Ubuntu, CentOS), maintenance d'infrastructure, configuration de firewalls et monitoring avec des outils open-source."
-    },
-    {
-      "id": 4,
-      "year": "2022",
-      "title": "Licence Informatique",
-      "description": "Fondamentaux en programmation, réseaux et systèmes. Premiers pas dans l'administration Linux et la sécurité informatique."
     }
   ],
   "projects": [
@@ -40,86 +44,175 @@
       "emoji": "🚀",
       "title": "Kubernetes Multi-Tier App",
       "duration": "3 mois",
-      "description": "Architecture Kubernetes complète avec déploiement de 3 tiers (frontend, backend, database), auto-scaling, health checks et service mesh avec Istio. Intégration monitoring complet.",
+      "date": "2024",
+      "status": "completed",
+      "description": "Architecture Kubernetes complète avec déploiement de 3 tiers (frontend, backend, database), auto-scaling, health checks et service mesh avec Istio.",
       "tags": ["Kubernetes", "Docker", "Monitoring", "Production"],
       "details": "Ce projet a impliqué la conception d'une architecture cloud-native scalable avec Kubernetes. J'ai mis en place des pods répliqués, des services de load balancing, et une stratégie de monitoring avec Prometheus et Grafana. Le temps de déploiement a été réduit de 90%.",
-      "image": "https://via.placeholder.com/400x300?text=K8s+Project"
+      "images": [
+        "https://via.placeholder.com/600x400?text=K8s+Architecture",
+        "https://via.placeholder.com/600x400?text=K8s+Dashboard"
+      ]
     },
     {
       "id": 2,
       "emoji": "🔄",
       "title": "GitLab CI/CD Pipeline",
       "duration": "2 mois",
+      "date": "2024",
+      "status": "completed",
       "description": "Pipeline CI/CD complète avec tests automatisés, build Docker, scan de sécurité, déploiement staging/production. Réduction du temps de déploiement de 80%.",
       "tags": ["GitLab CI", "Docker", "Automation", "Security Scan"],
       "details": "Mise en place d'une pipeline complète avec GitLab CI incluant les étapes de build, test, security scanning et déploiement automatisé. Intégration avec SonarQube pour l'analyse de code et Trivy pour le scanning des images Docker.",
-      "image": "https://via.placeholder.com/400x300?text=CI+CD"
+      "images": [
+        "https://via.placeholder.com/600x400?text=CI+CD+Pipeline",
+        "https://via.placeholder.com/600x400?text=Build+Process"
+      ]
     },
     {
       "id": 3,
       "emoji": "🏗️",
       "title": "Infrastructure as Code",
       "duration": "4 mois",
+      "date": "2023",
+      "status": "completed",
       "description": "Provisionning complet d'infrastructure AWS avec Terraform. VPC, EC2, RDS, Load Balancing automatisé. Environnements dev/staging/prod en quelques commandes.",
       "tags": ["Terraform", "AWS", "IaC", "Multi-env"],
       "details": "Création d'une infrastructure entièrement codifiée avec Terraform permettant la réplication complète d'environnements. Gestion des VPC, subnets, security groups, EC2 instances, RDS databases et ALB. Réduction du temps de provisioning de 95%.",
-      "image": "https://via.placeholder.com/400x300?text=IaC+AWS"
+      "images": [
+        "https://via.placeholder.com/600x400?text=Terraform+Code",
+        "https://via.placeholder.com/600x400?text=AWS+Architecture"
+      ]
     },
     {
       "id": 4,
       "emoji": "📊",
       "title": "Monitoring Stack",
       "duration": "2,5 mois",
+      "date": "2023",
+      "status": "completed",
       "description": "Stack de monitoring complet avec Prometheus, Grafana et Alertmanager. Dashboard personnalisés, alertes intelligentes et métriques business intégrées.",
       "tags": ["Prometheus", "Grafana", "Observabilité", "ELK"],
       "details": "Déploiement d'une stack complète de monitoring incluant Prometheus pour la collecte des métriques, Grafana pour la visualisation avec des dashboards custom, et Alertmanager pour la gestion des alertes. Intégration avec les stacks application pour les métriques business.",
-      "image": "https://via.placeholder.com/400x300?text=Monitoring"
+      "images": [
+        "https://via.placeholder.com/600x400?text=Grafana+Dashboard",
+        "https://via.placeholder.com/600x400?text=Prometheus+Metrics"
+      ]
     },
     {
       "id": 5,
       "emoji": "🤖",
       "title": "Automation Scripts",
       "duration": "1,5 mois",
+      "date": "2023",
+      "status": "completed",
       "description": "Suite d'Ansible playbooks et scripts Bash pour automatisation complète: déploiement, configuration, backup, restore avec rollback automation.",
       "tags": ["Bash", "Ansible", "Python", "Automation"],
       "details": "Création d'une suite complète de scripts et playbooks Ansible pour automatiser la gestion d'infrastructure. Incluant la configuration de serveurs, le déploiement d'applications, les backups quotidiens et les mécanismes de rollback automatique en cas d'erreur.",
-      "image": "https://via.placeholder.com/400x300?text=Automation"
+      "images": [
+        "https://via.placeholder.com/600x400?text=Ansible+Playbooks",
+        "https://via.placeholder.com/600x400?text=Automation+Flow"
+      ]
     },
     {
       "id": 6,
       "emoji": "🔒",
       "title": "Security Hardening",
       "duration": "2 mois",
+      "date": "2022",
+      "status": "completed",
       "description": "Audit et hardening complet de serveurs Linux. Firewall rules, SELinux policies, encryption at rest/transit et compliance avec standards sécurité.",
       "tags": ["Linux Security", "Compliance", "Encryption", "Audit"],
       "details": "Audit de sécurité complet d'une infrastructure Linux, suivi d'un hardening systématique. Configuration des firewalls, implémentation de SELinux, encryption des données en transit et au repos, et mise en conformité avec les standards de sécurité (CIS Benchmarks).",
-      "image": "https://via.placeholder.com/400x300?text=Security"
+      "images": [
+        "https://via.placeholder.com/600x400?text=Security+Audit",
+        "https://via.placeholder.com/600x400?text=Hardening+Report"
+      ]
+    },
+    {
+      "id": 7,
+      "emoji": "☁️",
+      "title": "Cloud Migration Project",
+      "duration": "En cours",
+      "date": "2025",
+      "status": "in-progress",
+      "description": "Migration complète d'une infrastructure on-premise vers AWS. Incluant la planification, la migration des données et la validation en environnement production.",
+      "tags": ["AWS", "Migration", "Cloud", "DevOps"],
+      "details": "Projet en cours visant à migrer une infrastructure existante vers le cloud AWS. Planification de la stratégie migration, mise en place de VPN temporaires, validation de la conformité et optimisation des coûts.",
+      "images": [
+        "https://via.placeholder.com/600x400?text=Migration+Plan",
+        "https://via.placeholder.com/600x400?text=Cloud+Setup"
+      ]
     }
   ],
   "skills": {
-    "infrastructure": {
-      "title": "☁️ Cloud & Infrastructure",
-      "items": ["Docker & Containerisation", "Kubernetes (déploiement & scaling)", "AWS / GCP / Azure basics", "Terraform (IaC)", "Load Balancing & Reverse Proxy"]
+    "learned": {
+      "title": "Compétences Maîtrisées",
+      "categories": {
+        "infrastructure": {
+          "emoji": "☁️",
+          "title": "Cloud & Infrastructure",
+          "items": ["Docker & Containerisation", "Kubernetes (déploiement & scaling)", "AWS / GCP / Azure basics", "Terraform (IaC)", "Load Balancing & Reverse Proxy"]
+        },
+        "cicd": {
+          "emoji": "🔄",
+          "title": "CI/CD & Automatisation",
+          "items": ["GitHub Actions & GitLab CI", "Jenkins pipelines", "Ansible playbooks", "Bash scripting avancé", "Infrastructure Provisioning"]
+        },
+        "linux": {
+          "emoji": "🐧",
+          "title": "Linux & Systèmes",
+          "items": ["Ubuntu, CentOS, Debian", "Gestion des services & processus", "Sécurité système & hardening", "Monitoring (Prometheus, ELK)", "Performance tuning"]
+        },
+        "network": {
+          "emoji": "🔐",
+          "title": "Réseaux & Sécurité",
+          "items": ["VPC & Network segmentation", "Firewalls & iptables", "SSL/TLS certificates", "VPN & tunneling", "DNS & reverse proxy"]
+        },
+        "languages": {
+          "emoji": "👨‍💻",
+          "title": "Langages & Outils",
+          "items": ["Bash / Shell scripting", "Python for automation", "Git & version control", "Docker Compose", "Linux command line mastery"]
+        },
+        "monitoring": {
+          "emoji": "📊",
+          "title": "Monitoring & Observabilité",
+          "items": ["Prometheus & Grafana", "ELK Stack (Elasticsearch, Logstash)", "Alert management", "Distributed tracing", "Custom dashboards"]
+        }
+      }
     },
-    "cicd": {
-      "title": "🔄 CI/CD & Automatisation",
-      "items": ["GitHub Actions & GitLab CI", "Jenkins pipelines", "Ansible playbooks", "Bash scripting avancé", "Infrastructure Provisioning"]
+    "learning": {
+      "title": "En Train d'Apprendre",
+      "categories": {
+        "advanced": {
+          "emoji": "🎓",
+          "title": "Technologies Avancées",
+          "items": ["Service Mesh (Istio, Linkerd)", "Advanced Kubernetes (operators, CRDs)", "GitOps (ArgoCD, Flux)", "Observability (OpenTelemetry)", "eBPF & Advanced Networking"]
+        },
+        "platforms": {
+          "emoji": "🌐",
+          "title": "Plateformes Cloud",
+          "items": ["AWS (Services avancés)", "Google Cloud Platform (GCP)", "Azure DevOps", "Kubernetes Distros (EKS, GKE, AKS)", "Multi-cloud strategies"]
+        },
+        "languages_new": {
+          "emoji": "💻",
+          "title": "Nouveaux Langages",
+          "items": ["Go (Golang)", "Rust for systems", "TypeScript", "Java for cloud apps", "Kotlin"]
+        }
+      }
     },
-    "linux": {
-      "title": "🐧 Linux & Systèmes",
-      "items": ["Ubuntu, CentOS, Debian", "Gestion des services & processus", "Sécurité système & hardening", "Monitoring (Prometheus, ELK)", "Performance tuning"]
-    },
-    "network": {
-      "title": "🔐 Réseaux & Sécurité",
-      "items": ["VPC & Network segmentation", "Firewalls & iptables", "SSL/TLS certificates", "VPN & tunneling", "DNS & reverse proxy"]
-    },
-    "languages": {
-      "title": "👨‍💻 Langages & Outils",
-      "items": ["Bash / Shell scripting", "Python for automation", "Git & version control", "Docker Compose", "Linux command line mastery"]
-    },
-    "monitoring": {
-      "title": "📊 Monitoring & Observabilité",
-      "items": ["Prometheus & Grafana", "ELK Stack (Elasticsearch, Logstash)", "Alert management", "Distributed tracing", "Custom dashboards"]
+    "soft_skills": {
+      "title": "Compétences Transversales",
+      "items": [
+        "Leadership & Mentorat",
+        "Communication Technique",
+        "Résolution de Problèmes",
+        "Gestion de Projet Agile",
+        "Documentation & Knowledge Sharing",
+        "Travail en Équipe",
+        "Pensée Critique",
+        "Apprentissage Continu"
+      ]
     }
   },
   "stats": [

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact - Ramdani Khaled">
+    <title>Contact | Ramdani Khaled</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="name">Ramdani Khaled</div>
+        <div class="title">SRE & DevOps Engineer</div>
+        <div class="subtitle">Infrastructure • Automation • Cloud • Master IRS - Paris Saclay</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
+            <a href="experience.html">Expérience</a>
+            <a href="projects.html">Projets</a>
+            <a href="skills.html">Compétences</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À Propos</a>
+            <a href="education.html">Formation</a>
+            <a href="experience.html">Expérience</a>
+            <a href="projects.html">Projets</a>
+            <a href="skills.html">Compétences</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="contact">
+            <h2 style="text-align: center; margin-bottom: 30px;">Me Contacter</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 60px; font-size: 1.05em; line-height: 1.8; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Vous avez un projet intéressant, une opportunité de collaboration ou simplement des questions? Je suis toujours disponible pour discuter. N'hésitez pas à me contacter par l'un des moyens ci-dessous.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <h3>Plusieurs Moyens de me Contacter</h3>
+                    <p>
+                        Que ce soit pour discuter d'une opportunité professionnelle, d'une collaboration ou simplement pour bavarder DevOps, je serais heureux de vous entendre.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:khaled.ramdani@example.com" class="contact-link">
+                            <div class="contact-link-icon">📧</div>
+                            <div class="contact-link-text">
+                                <h4>Email</h4>
+                                <p>khaled.ramdani@example.com</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/RamdaniKhaled" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">💼</div>
+                            <div class="contact-link-text">
+                                <h4>GitHub</h4>
+                                <p>@RamdaniKhaled</p>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">🔗</div>
+                            <div class="contact-link-text">
+                                <h4>LinkedIn</h4>
+                                <p>Ramdani Khaled</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 30px;">Envoyez-moi un Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Votre Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Votre Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <h2 style="text-align: center;">Suivez mon Travail</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 1.05em;">
+                Retrouvez-moi sur ces plateformes pour suivre mes projets et mes actualités.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://github.com/RamdaniKhaled" target="_blank" class="btn btn-primary">❯ GitHub</a>
+                <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">🔗 LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
