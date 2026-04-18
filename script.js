@@ -348,15 +348,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupProjectSorting();
     setupModalClosing();
 });
-    if (!container) return;
-    
-    container.innerHTML = siteData.stats.map(stat => `
-        <div class="stat-box">
-            <div class="number">${stat.number}</div>
-            <div class="label">${stat.label}</div>
-        </div>
-    `).join('');
-}
 
 // Render detailed projects page
 function renderDetailedProjects() {
