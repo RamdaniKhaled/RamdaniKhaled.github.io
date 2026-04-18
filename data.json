@@ -1,0 +1,139 @@
+{
+  "profile": {
+    "name": "Ramdani Khaled",
+    "title": "SRE & DevOps Engineer",
+    "subtitle": "Infrastructure • Automation • Cloud • Master IRS - Paris Saclay",
+    "bio": "Passionné par les infrastructures modernes et l'automatisation, je suis un étudiant en Master IRS (Infrastructures et Réseaux de Systèmes) chez Paris Saclay avec une solide expérience pratique en DevOps.",
+    "email": "khaled.ramdani@example.com",
+    "github": "https://github.com/RamdaniKhaled",
+    "linkedin": "https://linkedin.com"
+  },
+  "experience": [
+    {
+      "id": 1,
+      "year": "2024 - Présent",
+      "title": "Master IRS - Université Paris Saclay",
+      "description": "Spécialisation en infrastructures cloud, DevOps et administration système. Projets académiques incluant containerisation, orchestration et Infrastructure as Code."
+    },
+    {
+      "id": 2,
+      "year": "2023 - 2024",
+      "title": "Stagiaire DevOps",
+      "description": "Mise en place d'infrastructure Docker, création de pipelines CI/CD avec GitLab CI, automatisation du provisioning avec Ansible et scripts Bash."
+    },
+    {
+      "id": 3,
+      "year": "2022 - 2023",
+      "title": "Administrateur Système Junior",
+      "description": "Gestion de serveurs Linux (Ubuntu, CentOS), maintenance d'infrastructure, configuration de firewalls et monitoring avec des outils open-source."
+    },
+    {
+      "id": 4,
+      "year": "2022",
+      "title": "Licence Informatique",
+      "description": "Fondamentaux en programmation, réseaux et systèmes. Premiers pas dans l'administration Linux et la sécurité informatique."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "emoji": "🚀",
+      "title": "Kubernetes Multi-Tier App",
+      "duration": "3 mois",
+      "description": "Architecture Kubernetes complète avec déploiement de 3 tiers (frontend, backend, database), auto-scaling, health checks et service mesh avec Istio. Intégration monitoring complet.",
+      "tags": ["Kubernetes", "Docker", "Monitoring", "Production"],
+      "details": "Ce projet a impliqué la conception d'une architecture cloud-native scalable avec Kubernetes. J'ai mis en place des pods répliqués, des services de load balancing, et une stratégie de monitoring avec Prometheus et Grafana. Le temps de déploiement a été réduit de 90%.",
+      "image": "https://via.placeholder.com/400x300?text=K8s+Project"
+    },
+    {
+      "id": 2,
+      "emoji": "🔄",
+      "title": "GitLab CI/CD Pipeline",
+      "duration": "2 mois",
+      "description": "Pipeline CI/CD complète avec tests automatisés, build Docker, scan de sécurité, déploiement staging/production. Réduction du temps de déploiement de 80%.",
+      "tags": ["GitLab CI", "Docker", "Automation", "Security Scan"],
+      "details": "Mise en place d'une pipeline complète avec GitLab CI incluant les étapes de build, test, security scanning et déploiement automatisé. Intégration avec SonarQube pour l'analyse de code et Trivy pour le scanning des images Docker.",
+      "image": "https://via.placeholder.com/400x300?text=CI+CD"
+    },
+    {
+      "id": 3,
+      "emoji": "🏗️",
+      "title": "Infrastructure as Code",
+      "duration": "4 mois",
+      "description": "Provisionning complet d'infrastructure AWS avec Terraform. VPC, EC2, RDS, Load Balancing automatisé. Environnements dev/staging/prod en quelques commandes.",
+      "tags": ["Terraform", "AWS", "IaC", "Multi-env"],
+      "details": "Création d'une infrastructure entièrement codifiée avec Terraform permettant la réplication complète d'environnements. Gestion des VPC, subnets, security groups, EC2 instances, RDS databases et ALB. Réduction du temps de provisioning de 95%.",
+      "image": "https://via.placeholder.com/400x300?text=IaC+AWS"
+    },
+    {
+      "id": 4,
+      "emoji": "📊",
+      "title": "Monitoring Stack",
+      "duration": "2,5 mois",
+      "description": "Stack de monitoring complet avec Prometheus, Grafana et Alertmanager. Dashboard personnalisés, alertes intelligentes et métriques business intégrées.",
+      "tags": ["Prometheus", "Grafana", "Observabilité", "ELK"],
+      "details": "Déploiement d'une stack complète de monitoring incluant Prometheus pour la collecte des métriques, Grafana pour la visualisation avec des dashboards custom, et Alertmanager pour la gestion des alertes. Intégration avec les stacks application pour les métriques business.",
+      "image": "https://via.placeholder.com/400x300?text=Monitoring"
+    },
+    {
+      "id": 5,
+      "emoji": "🤖",
+      "title": "Automation Scripts",
+      "duration": "1,5 mois",
+      "description": "Suite d'Ansible playbooks et scripts Bash pour automatisation complète: déploiement, configuration, backup, restore avec rollback automation.",
+      "tags": ["Bash", "Ansible", "Python", "Automation"],
+      "details": "Création d'une suite complète de scripts et playbooks Ansible pour automatiser la gestion d'infrastructure. Incluant la configuration de serveurs, le déploiement d'applications, les backups quotidiens et les mécanismes de rollback automatique en cas d'erreur.",
+      "image": "https://via.placeholder.com/400x300?text=Automation"
+    },
+    {
+      "id": 6,
+      "emoji": "🔒",
+      "title": "Security Hardening",
+      "duration": "2 mois",
+      "description": "Audit et hardening complet de serveurs Linux. Firewall rules, SELinux policies, encryption at rest/transit et compliance avec standards sécurité.",
+      "tags": ["Linux Security", "Compliance", "Encryption", "Audit"],
+      "details": "Audit de sécurité complet d'une infrastructure Linux, suivi d'un hardening systématique. Configuration des firewalls, implémentation de SELinux, encryption des données en transit et au repos, et mise en conformité avec les standards de sécurité (CIS Benchmarks).",
+      "image": "https://via.placeholder.com/400x300?text=Security"
+    }
+  ],
+  "skills": {
+    "infrastructure": {
+      "title": "☁️ Cloud & Infrastructure",
+      "items": ["Docker & Containerisation", "Kubernetes (déploiement & scaling)", "AWS / GCP / Azure basics", "Terraform (IaC)", "Load Balancing & Reverse Proxy"]
+    },
+    "cicd": {
+      "title": "🔄 CI/CD & Automatisation",
+      "items": ["GitHub Actions & GitLab CI", "Jenkins pipelines", "Ansible playbooks", "Bash scripting avancé", "Infrastructure Provisioning"]
+    },
+    "linux": {
+      "title": "🐧 Linux & Systèmes",
+      "items": ["Ubuntu, CentOS, Debian", "Gestion des services & processus", "Sécurité système & hardening", "Monitoring (Prometheus, ELK)", "Performance tuning"]
+    },
+    "network": {
+      "title": "🔐 Réseaux & Sécurité",
+      "items": ["VPC & Network segmentation", "Firewalls & iptables", "SSL/TLS certificates", "VPN & tunneling", "DNS & reverse proxy"]
+    },
+    "languages": {
+      "title": "👨‍💻 Langages & Outils",
+      "items": ["Bash / Shell scripting", "Python for automation", "Git & version control", "Docker Compose", "Linux command line mastery"]
+    },
+    "monitoring": {
+      "title": "📊 Monitoring & Observabilité",
+      "items": ["Prometheus & Grafana", "ELK Stack (Elasticsearch, Logstash)", "Alert management", "Distributed tracing", "Custom dashboards"]
+    }
+  },
+  "stats": [
+    {
+      "number": "5+",
+      "label": "Projets DevOps"
+    },
+    {
+      "number": "3+",
+      "label": "Années Linux"
+    },
+    {
+      "number": "100%",
+      "label": "CI/CD Coverage"
+    }
+  ]
+}

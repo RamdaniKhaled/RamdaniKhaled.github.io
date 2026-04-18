@@ -719,3 +719,113 @@ footer a:hover {
         padding: 50px 20px 40px;
     }
 }
+
+/* DETAILED PROJECTS PAGE */
+.projects-detailed-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.project-detail-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.project-detail-card:hover {
+    box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-detail-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.7), rgba(167, 139, 250, 0.7));
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-detail-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.project-detail-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-detail-content h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.project-detail-content .duration {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.project-detail-content .description {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.project-detail-content .details {
+    color: var(--text-lighter);
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+    .project-detail-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
