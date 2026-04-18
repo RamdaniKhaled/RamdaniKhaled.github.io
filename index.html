@@ -1,9 +1,171 @@
 <!DOCTYPE html>
-<html>
-<head><title>Portfolio de Ramdani Khaled</title></head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Ramdani Khaled - Ingénieur Réseaux et Systèmes / DevOps">
+    <title>Ramdani Khaled | Ingénieur Réseaux & DevOps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <h1>Ingénieur Réseaux et Systèmes / DevOps</h1>
-    <p>Étudiant en Master IRS à l'UVSQ - Paris Saclay.</p>
-    <a href="https://github.com/RamdaniKhaled">Voir mes projets sur GitHub</a>
+    <header>
+        <div class="name">Ramdani Khaled</div>
+        <div class="title">Ingénieur Réseaux & Systèmes / DevOps</div>
+        <div class="subtitle">Master IRS - Université Paris Saclay</div>
+        <nav>
+            <a href="#about">À Propos</a>
+            <a href="#skills">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>À Propos</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Bienvenue sur mon portfolio! Je suis <strong>Ramdani Khaled</strong>, un passionné d'infrastructure et de systèmes d'information.
+                    </p>
+                    <p>
+                        Actuellement inscrit en <strong>Master IRS (Infrastructures et Réseaux de Systèmes)</strong> à l'Université Paris Saclay, je développe une expertise approfondie en DevOps, administration système et architecture cloud.
+                    </p>
+                    <p>
+                        Mon objectif est de concevoir et maintenir des infrastructures robustes, évolutives et sécurisées. Je m'intéresse particulièrement à l'automatisation, la containerisation et l'orchestration d'applications.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div style="font-size: 0.95em; line-height: 2; color: var(--text-light);">
+                        <p><strong style="color: var(--primary); font-size: 1.3em;">🎓</strong> Master IRS</p>
+                        <p><strong style="color: var(--accent); font-size: 1.3em;">⚙️</strong> DevOps & Infrastructure</p>
+                        <p><strong style="color: var(--primary); font-size: 1.3em;">🔧</strong> Technologies Modernes</p>
+                        <p><strong style="color: var(--accent); font-size: 1.3em;">🚀</strong> Toujours en Apprentissage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Infrastructure & Systèmes</h3>
+                    <ul>
+                        <li>Linux (Ubuntu, CentOS, Debian)</li>
+                        <li>Windows Server</li>
+                        <li>Administration système</li>
+                        <li>Virtualisation</li>
+                        <li>Haute disponibilité</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps & Cloud</h3>
+                    <ul>
+                        <li>Docker & Containerisation</li>
+                        <li>Kubernetes</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Réseaux & Sécurité</h3>
+                    <ul>
+                        <li>Configuration réseau</li>
+                        <li>Firewalls et pare-feu</li>
+                        <li>VPN & Tunneling</li>
+                        <li>Sécurité système</li>
+                        <li>Monitoring & Alertes</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Outils & Langages</h3>
+                    <ul>
+                        <li>Bash/Shell Scripting</li>
+                        <li>Python</li>
+                        <li>Git & Version Control</li>
+                        <li>Terraform & Ansible</li>
+                        <li>Jenkins & GitLab CI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Infrastructure Docker</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Mise en place d'une infrastructure containerisée avec Docker et docker-compose pour déploiement d'applications multi-conteneurs.</p>
+                        <div class="project-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Containerisation</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Automatisation Système</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Scripts d'automatisation pour gestion des serveurs, provisionning d'infrastructure et maintenance système automatisée.</p>
+                        <div class="project-tags">
+                            <span class="tag">Bash</span>
+                            <span class="tag">Ansible</span>
+                            <span class="tag">Automatisation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Pipeline CI/CD</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Configuration de pipelines d'intégration continue et déploiement continu avec GitHub Actions et GitLab CI.</p>
+                        <div class="project-tags">
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">GitLab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 20px;">
+                Intéressé pour collaborer ou discuter d'opportunités? N'hésitez pas à me contacter!
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <p style="color: var(--text-light); margin-bottom: 10px;">GitHub</p>
+                    <a href="https://github.com/RamdaniKhaled" target="_blank">RamdaniKhaled</a>
+                </div>
+                <div class="contact-item">
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Email</p>
+                    <a href="mailto:khaled.ramdani@example.com">khaled.ramdani@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <p style="color: var(--text-light); margin-bottom: 10px;">LinkedIn</p>
+                    <a href="https://linkedin.com" target="_blank">Ramdani Khaled</a>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="https://github.com/RamdaniKhaled" class="btn btn-primary" target="_blank">Voir mes projets GitHub</a>
+                <a href="mailto:khaled.ramdani@example.com" class="btn btn-secondary">M'écrire un email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ramdani Khaled. Tous droits réservés.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Portfolio créé avec passion pour mon futur professionnel.</p>
+    </footer>
 </body>
 </html>
