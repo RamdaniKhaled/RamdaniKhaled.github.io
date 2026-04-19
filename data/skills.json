@@ -1,115 +1,92 @@
 {
   "learned": {
-    "title": "Compétences Maîtrisées",
+    "title": "Competences Techniques",
     "categories": {
-      "infrastructure": {
-        "title": "Cloud & Infrastructure",
-        "items": [
-          "Docker & Containerisation",
-          "Kubernetes (déploiement & scaling)",
-          "AWS / GCP / Azure basics",
-          "Terraform (IaC)",
-          "Load Balancing & Reverse Proxy"
-        ]
-      },
-      "cicd": {
-        "title": "CI/CD & Automatisation",
-        "items": [
-          "GitHub Actions & GitLab CI",
-          "Jenkins pipelines",
-          "Ansible playbooks",
-          "Bash scripting avancé",
-          "Infrastructure Provisioning"
-        ]
-      },
-      "linux": {
-        "title": "Linux & Systèmes",
-        "items": [
-          "Ubuntu, CentOS, Debian",
-          "Gestion des services & processus",
-          "Sécurité système & hardening",
-          "Monitoring (Prometheus, ELK)",
-          "Performance tuning"
-        ]
-      },
       "network": {
-        "title": "Réseaux & Sécurité",
+        "title": "Reseaux",
         "items": [
-          "VPC & Network segmentation",
-          "Firewalls & iptables",
-          "SSL/TLS certificates",
-          "VPN & tunneling",
-          "DNS & reverse proxy"
+          "TCP/IP",
+          "VLAN",
+          "DHCP",
+          "DNS",
+          "Routage",
+          "Wireshark",
+          "Nmap"
         ]
       },
-      "languages": {
-        "title": "Langages & Outils",
+      "systems": {
+        "title": "Systemes",
         "items": [
-          "Bash / Shell scripting",
-          "Python for automation",
-          "Git & version control",
-          "Docker Compose",
-          "Linux command line mastery"
+          "Linux (Ubuntu/Debian)",
+          "Windows Server",
+          "WSL2",
+          "VirtualBox",
+          "Bash scripting"
         ]
       },
-      "monitoring": {
-        "title": "Monitoring & Observabilité",
+      "cloud_devops": {
+        "title": "Cloud et DevOps",
         "items": [
-          "Prometheus & Grafana",
-          "ELK Stack (Elasticsearch, Logstash)",
-          "Alert management",
-          "Distributed tracing",
-          "Custom dashboards"
+          "Docker",
+          "Kubernetes (k3s/Minikube)",
+          "Helm",
+          "Terraform (AWS)",
+          "CI/CD (GitLab CI/CD)",
+          "GitOps (ArgoCD)",
+          "Semgrep",
+          "Trivy"
+        ]
+      },
+      "observability": {
+        "title": "Observabilite",
+        "items": [
+          "Prometheus",
+          "Grafana",
+          "Alerting (Telegram API/Alertmanager)",
+          "Monitoring"
+        ]
+      },
+      "programming": {
+        "title": "Programmation et Bases de donnees",
+        "items": [
+          "Python",
+          "SQL",
+          "Git",
+          "Developpement web full-stack"
         ]
       }
     }
   },
   "learning": {
-    "title": "En Train d'Apprendre",
+    "title": "Approfondissement en Cours",
     "categories": {
-      "advanced": {
-        "title": "Technologies Avancées",
+      "devsecops": {
+        "title": "DevSecOps avance",
         "items": [
-          "Service Mesh (Istio, Linkerd)",
-          "Advanced Kubernetes (operators, CRDs)",
-          "GitOps (ArgoCD, Flux)",
-          "Observability (OpenTelemetry)",
-          "eBPF & Advanced Networking"
+          "Securite des pipelines CI/CD",
+          "Automatisation des controles SAST et image scanning",
+          "Bonnes pratiques GitOps en environnement production"
         ]
       },
-      "platforms": {
-        "title": "Plateformes Cloud",
+      "platform": {
+        "title": "Plateformes et exploitation",
         "items": [
-          "AWS (Services avancés)",
-          "Google Cloud Platform (GCP)",
-          "Azure DevOps",
-          "Kubernetes Distros (EKS, GKE, AKS)",
-          "Multi-cloud strategies"
-        ]
-      },
-      "languages_new": {
-        "title": "Nouveaux Langages",
-        "items": [
-          "Go (Golang)",
-          "Rust for systems",
-          "TypeScript",
-          "Java for cloud apps",
-          "Kotlin"
+          "Administration Kubernetes en contexte reel",
+          "Fiabilite des infrastructures hybrides Linux/Windows",
+          "Observabilite orientee alerting temps reel"
         ]
       }
     }
   },
   "soft_skills": {
-    "title": "Compétences Transversales",
+    "title": "Competences Transversales",
     "items": [
-      "Leadership & Mentorat",
-      "Communication Technique",
-      "Résolution de Problèmes",
-      "Gestion de Projet Agile",
-      "Documentation & Knowledge Sharing",
-      "Travail en Équipe",
-      "Pensée Critique",
-      "Apprentissage Continu"
+      "Resolution de problemes",
+      "Autonomie",
+      "Travail en equipe",
+      "Communication technique",
+      "Rigueur",
+      "Apprentissage continu"
     ]
   }
 }

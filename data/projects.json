@@ -1,135 +1,81 @@
 [
   {
     "id": 1,
-    "title": "Kubernetes Multi-Tier App",
-    "duration": "3 mois",
-    "date": "2024",
+    "title": "Pipeline GitOps DevSecOps",
+    "duration": "Avril 2026",
+    "date": "2026",
     "status": "completed",
-    "description": "Architecture Kubernetes complète avec déploiement de 3 tiers (frontend, backend, database), auto-scaling, health checks et service mesh avec Istio.",
+    "description": "Developpement et conteneurisation d'une API REST Node.js (Express), provisionnement AWS EC2 (k3s) avec Terraform, deploiement Kubernetes avec Helm, puis synchronisation GitOps avec ArgoCD.",
     "tags": [
+      "Node.js",
+      "Express",
+      "Docker",
+      "Terraform",
+      "AWS",
+      "k3s",
       "Kubernetes",
-      "Docker",
-      "Monitoring",
-      "Production"
-    ],
-    "details": "Ce projet a impliqué la conception d'une architecture cloud-native scalable avec Kubernetes. J'ai mis en place des pods répliqués, des services de load balancing, et une stratégie de monitoring avec Prometheus et Grafana. Le temps de déploiement a été réduit de 90%.",
-    "images": [
-      "assets/projects/project-kubernetes-1.jpg",
-      "assets/projects/project-kubernetes-2.jpg"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "GitLab CI/CD Pipeline",
-    "duration": "2 mois",
-    "date": "2024",
-    "status": "completed",
-    "description": "Pipeline CI/CD complète avec tests automatisés, build Docker, scan de sécurité, déploiement staging/production. Réduction du temps de déploiement de 80%.",
-    "tags": [
+      "Helm",
+      "GitOps",
+      "ArgoCD",
       "GitLab CI",
-      "Docker",
-      "Automation",
-      "Security Scan"
+      "Semgrep",
+      "Trivy"
     ],
-    "details": "Mise en place d'une pipeline complète avec GitLab CI incluant les étapes de build, test, security scanning et déploiement automatisé. Intégration avec SonarQube pour l'analyse de code et Trivy pour le scanning des images Docker.",
+    "details": "Pipeline de bout en bout orientee DevSecOps: build Docker multi-stage, deploiement Kubernetes via Helm, et automatisation GitOps avec ArgoCD a chaque push Git. Une chaine de securite complete a ete integree dans GitLab CI avec SAST (Semgrep) et scan d'images (Trivy).",
+    "image": "assets/projects/project-gitlab-cicd-1.jpg",
     "images": [
       "assets/projects/project-gitlab-cicd-1.jpg",
       "assets/projects/project-gitlab-cicd-2.jpg"
     ]
   },
   {
-    "id": 3,
-    "title": "Infrastructure as Code",
-    "duration": "4 mois",
-    "date": "2023",
+    "id": 2,
+    "title": "Pipeline DevSecOps et Observabilite",
+    "duration": "Mars 2026",
+    "date": "2026",
     "status": "completed",
-    "description": "Provisionning complet d'infrastructure AWS avec Terraform. VPC, EC2, RDS, Load Balancing automatisé. Environnements dev/staging/prod en quelques commandes.",
+    "description": "Creation d'un microservice Python (Flask) expose avec metriques systeme via psutil, automatise par GitLab CI, puis deploiement local (WSL2) avec supervision Prometheus/Grafana et alerting Telegram.",
     "tags": [
-      "Terraform",
-      "AWS",
-      "IaC",
-      "Multi-env"
-    ],
-    "details": "Création d'une infrastructure entièrement codifiée avec Terraform permettant la réplication complète d'environnements. Gestion des VPC, subnets, security groups, EC2 instances, RDS databases et ALB. Réduction du temps de provisioning de 95%.",
-    "images": [
-      "assets/projects/project-iac-1.jpg",
-      "assets/projects/project-iac-2.jpg"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Monitoring Stack",
-    "duration": "2,5 mois",
-    "date": "2023",
-    "status": "completed",
-    "description": "Stack de monitoring complet avec Prometheus, Grafana et Alertmanager. Dashboard personnalisés, alertes intelligentes et métriques business intégrées.",
-    "tags": [
+      "Python",
+      "Flask",
+      "psutil",
+      "GitLab CI",
+      "Docker",
+      "Trivy",
+      "WSL2",
       "Prometheus",
       "Grafana",
-      "Observabilité",
-      "ELK"
+      "Alertmanager",
+      "Telegram"
     ],
-    "details": "Déploiement d'une stack complète de monitoring incluant Prometheus pour la collecte des métriques, Grafana pour la visualisation avec des dashboards custom, et Alertmanager pour la gestion des alertes. Intégration avec les stacks application pour les métriques business.",
+    "details": "Projet axe observabilite et securite: build et scan d'images Docker dans GitLab CI, deploiement automatise sur environnement local avec GitLab Runner, orchestration de la stack de monitoring et alerting temps reel sur Telegram.",
+    "image": "assets/projects/project-monitoring-1.jpg",
     "images": [
       "assets/projects/project-monitoring-1.jpg",
       "assets/projects/project-monitoring-2.jpg"
     ]
   },
   {
-    "id": 5,
-    "title": "Automation Scripts",
-    "duration": "1,5 mois",
-    "date": "2023",
+    "id": 3,
+    "title": "Integration Active Directory et Nextcloud",
+    "duration": "Janvier 2026 - Fevrier 2026",
+    "date": "2026",
     "status": "completed",
-    "description": "Suite d'Ansible playbooks et scripts Bash pour automatisation complète: déploiement, configuration, backup, restore avec rollback automation.",
+    "description": "Conception d'une architecture multi-forets sous Windows Server 2025, deploiement Nextcloud sur Ubuntu 24.04, et authentification centralisee AD via LDAPS.",
     "tags": [
-      "Bash",
-      "Ansible",
-      "Python",
-      "Automation"
+      "Active Directory",
+      "Windows Server",
+      "Ubuntu",
+      "Nextcloud",
+      "LDAPS",
+      "DNS",
+      "Failover"
     ],
-    "details": "Création d'une suite complète de scripts et playbooks Ansible pour automatiser la gestion d'infrastructure. Incluant la configuration de serveurs, le déploiement d'applications, les backups quotidiens et les mécanismes de rollback automatique en cas d'erreur.",
+    "details": "Mise en place de domaines enfants, RODC et relations d'approbation, puis integration de Nextcloud avec synchronisation automatique des groupes AD. Validation de la tolerance aux pannes (failover DC) et de la resolution DNS inter-domaines.",
+    "image": "assets/projects/project-kubernetes-1.jpg",
     "images": [
-      "assets/projects/project-automation-1.jpg",
-      "assets/projects/project-automation-2.jpg"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Security Hardening",
-    "duration": "2 mois",
-    "date": "2022",
-    "status": "completed",
-    "description": "Audit et hardening complet de serveurs Linux. Firewall rules, SELinux policies, encryption at rest/transit et compliance avec standards sécurité.",
-    "tags": [
-      "Linux Security",
-      "Compliance",
-      "Encryption",
-      "Audit"
-    ],
-    "details": "Audit de sécurité complet d'une infrastructure Linux, suivi d'un hardening systématique. Configuration des firewalls, implémentation de SELinux, encryption des données en transit et au repos, et mise en conformité avec les standards de sécurité (CIS Benchmarks).",
-    "images": [
-      "assets/projects/project-security-1.jpg",
-      "assets/projects/project-security-2.jpg"
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Cloud Migration Project",
-    "duration": "En cours",
-    "date": "2025",
-    "status": "in-progress",
-    "description": "Migration complète d'une infrastructure on-premise vers AWS. Incluant la planification, la migration des données et la validation en environnement production.",
-    "tags": [
-      "AWS",
-      "Migration",
-      "Cloud",
-      "DevOps"
-    ],
-    "details": "Projet en cours visant à migrer une infrastructure existante vers le cloud AWS. Planification de la stratégie migration, mise en place de VPN temporaires, validation de la conformité et optimisation des coûts.",
-    "images": [
-      "assets/projects/project-cloud-migration-1.jpg",
-      "assets/projects/project-cloud-migration-2.jpg"
+      "assets/projects/project-kubernetes-1.jpg",
+      "assets/projects/project-kubernetes-2.jpg"
     ]
   }
 ]

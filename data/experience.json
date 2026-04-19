@@ -1,14 +1,8 @@
 [
   {
     "id": 1,
-    "year": "2023 - 2024",
-    "title": "Stagiaire DevOps",
-    "description": "Mise en place d'infrastructure Docker, création de pipelines CI/CD avec GitLab CI, automatisation du provisioning avec Ansible et scripts Bash."
-  },
-  {
-    "id": 2,
-    "year": "2022 - 2023",
-    "title": "Administrateur Système Junior",
-    "description": "Gestion de serveurs Linux (Ubuntu, CentOS), maintenance d'infrastructure, configuration de firewalls et monitoring avec des outils open-source."
+    "year": "Avril 2023 - Juin 2023",
+    "title": "Stagiaire Reseau - SARL Solution Digital Services, Tizi Ouzou (Algerie)",
+    "description": "Participation a la configuration reseau de base (adressage IP, DHCP, DNS), mise en place de petits reseaux internes (LAN), et diagnostic de pannes simples (cablage, connectivite)."
   }
 ]

@@ -1,11 +1,16 @@
 {
   "name": "Ramdani Khaled",
-  "title": "SRE & DevOps Engineer",
-  "subtitle": "Infrastructure • Automation • Cloud • Master IRS - Paris Saclay",
-  "bio": "Passionné par les infrastructures modernes et l'automatisation, je suis un étudiant en Master IRS (Infrastructures et Réseaux de Systèmes) chez Paris Saclay avec une solide expérience pratique en DevOps.",
-  "about": "Je suis un ingénieur DevOps passionné par la création d'infrastructures robustes et scalables. J'aime automatiser les processus répétitifs et construire des pipelines CI/CD efficaces. Mes centres d'intérêt incluent Kubernetes, l'Infrastructure as Code, et les pratiques DevOps qui améliorent la collaboration entre équipes.",
-  "interests": "Cloud Computing, Kubernetes, Infrastructure as Code, CI/CD Automation, Linux, Sécurité Informatique, Open Source",
-  "email": "khaled.ramdani@example.com",
+  "title": "Stagiaire Systemes, Reseaux et DevOps",
+  "subtitle": "Master 2 IRS | Administration Linux | Automatisation | Securite Infrastructure",
+  "bio": "Etudiant en Master 2 IRS, specialise en administration Linux, automatisation et securite des infrastructures. Maitrise du scripting et de la virtualisation. A la recherche d'un stage de fin d'etudes de 4 a 6 mois des le 1er Mai 2026.",
+  "about": "Je developpe et opere des environnements systemes et reseaux avec une approche DevSecOps orientee fiabilite. Mon experience couvre l'administration Linux, la containerisation, l'automatisation CI/CD, le deploiement Kubernetes, l'observabilite et la securisation des pipelines de livraison.",
+  "interests": "DevSecOps, GitOps, Administration Linux, Kubernetes, Observabilite, Securite des infrastructures",
+  "email": "khaled.ramdani@ens.uvsq.fr",
+  "phone": "+33 652772873",
+  "location": "Ile-de-France",
+  "nationalities": "Francaise, Algerienne",
+  "languages": "Anglais (C1 - Avance), Francais (Courant), Arabe (Courant), Kabyle (Maternel)",
   "github": "https://github.com/RamdaniKhaled",
-  "linkedin": "https://linkedin.com"
+  "linkedin": "https://www.linkedin.com/in/khaled-ramdani-uvsq",
+  "availability": "Stage de fin d'etudes 4 a 6 mois a partir du 1er Mai 2026"
 }

@@ -1,39 +1,39 @@
 {
   "intro": {
     "kicker": "Ce Qui M'Anime",
-    "title": "Intérêts & Curiosités",
-    "description": "Au-delà de l'exécution technique, je m'intéresse aux sujets qui créent de la robustesse, de la clarté et de l'impact durable dans les systèmes."
+    "title": "Interets Techniques",
+    "description": "Mes centres d'interet se concentrent sur l'administration systeme, l'automatisation, la securisation et l'exploitation fiable des infrastructures modernes."
   },
   "items": [
     {
-      "title": "Cloud Native",
-      "description": "Design de plateformes flexibles, orientées container, avec une forte culture d'automatisation et d'observabilité.",
-      "tags": ["Docker", "Kubernetes", "IaC"]
+      "title": "Administration Linux",
+      "description": "Concevoir et maintenir des environnements Linux robustes, avec scripting Bash et pratiques d'exploitation fiables.",
+      "tags": ["Linux", "Bash", "Systemes"]
     },
     {
-      "title": "SRE & Fiabilité",
-      "description": "Approches concrètes pour améliorer disponibilité, résilience et temps de récupération des services critiques.",
-      "tags": ["SLO", "Monitoring", "Incident Response"]
+      "title": "DevSecOps",
+      "description": "Integrer la securite nativement dans les workflows CI/CD avec des controles automatises de code et d'images.",
+      "tags": ["GitLab CI", "Semgrep", "Trivy"]
     },
     {
-      "title": "Sécurité Infra",
-      "description": "Hardening Linux, principes de moindre privilège et intégration de la sécurité dans les pipelines de delivery.",
-      "tags": ["DevSecOps", "Audit", "Compliance"]
+      "title": "Cloud et Orchestration",
+      "description": "Deployer des applications conteneurisees sur Kubernetes avec Terraform, Helm et pratiques GitOps.",
+      "tags": ["AWS", "Terraform", "Kubernetes", "ArgoCD"]
     },
     {
-      "title": "Performance Systèmes",
-      "description": "Optimisation des ressources, tuning des workloads et amélioration continue des temps de déploiement.",
-      "tags": ["Profiling", "Capacity Planning"]
+      "title": "Reseaux et Services",
+      "description": "Configurer et depanner des services reseau essentiels: adressage IP, DHCP, DNS et connectivite LAN.",
+      "tags": ["TCP/IP", "DHCP", "DNS", "LAN"]
     },
     {
-      "title": "Culture Engineering",
-      "description": "Collaboration inter-equipes, documentation utile, feedback loops rapides et pratiques de travail durables.",
-      "tags": ["DevOps Mindset"]
+      "title": "Observabilite",
+      "description": "Mettre en place des metriques, dashboards et alerting temps reel pour mieux piloter la disponibilite des services.",
+      "tags": ["Prometheus", "Grafana", "Alerting"]
     },
     {
-      "title": "Veille Technologique",
-      "description": "Exploration continue des outils cloud et des patterns d'architecture pour rester pertinent sur le long terme.",
-      "tags": ["Learning by Building"]
+      "title": "Systemes hybrides",
+      "description": "Combiner environnements Windows Server et Linux avec annuaire, authentification centralisee et tests de resilience.",
+      "tags": ["Active Directory", "LDAPS", "Nextcloud"]
     }
   ]
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV - Ramdani Khaled">
+    <title>CV | Ramdani Khaled</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="cv" class="cv-page">
+            <div class="page-intro page-intro-left">
+                <p class="page-kicker">Resume</p>
+                <h2>Curriculum Vitae</h2>
+                <p>Consultez mon CV directement ici. Vous pouvez aussi telecharger la version PDF.</p>
+            </div>
+
+            <div class="cv-layout">
+                <article class="cv-panel">
+                    <div class="cv-actions">
+                        <button type="button" id="loadCvInline" class="btn btn-primary">Afficher le CV ici</button>
+                        <a href="assets/cv/ramdani-khaled-cv.pdf" class="btn btn-secondary" download>Télécharger</a>
+                    </div>
+                    <p class="cv-preview-note">Le CV PDF ne se charge que quand vous cliquez sur "Afficher le CV ici".</p>
+                    <iframe class="cv-embed" src="about:blank" data-src="assets/cv/ramdani-khaled-cv.pdf" title="CV PDF de Ramdani Khaled"></iframe>
+                </article>
+
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
+        <p class="footer-note">Construire des infrastructures robustes, automatisées et fiables.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

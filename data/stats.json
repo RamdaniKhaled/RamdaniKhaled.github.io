@@ -1,14 +1,14 @@
 [
   {
-    "number": "5+",
-    "label": "Projets DevOps"
+    "number": "3",
+    "label": "Projets DevSecOps et Infra"
   },
   {
-    "number": "3+",
-    "label": "Années Linux"
+    "number": "4",
+    "label": "Langues parlees"
   },
   {
-    "number": "100%",
-    "label": "CI/CD Coverage"
+    "number": "M2",
+    "label": "Ingenierie Reseaux et Systemes"
   }
 ]

@@ -10,34 +10,57 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À Propos</a>
-            <a href="education.html">Formation</a>
-            <a href="experience.html">Expérience</a>
-            <a href="projects.html">Projets</a>
-            <a href="skills.html">Compétences</a>
-            <a href="interests.html">Intérêts</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="cv.html">CV</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
-        <section id="home">
-            <div class="page-intro page-intro-left">
-                <p class="page-kicker">Accueil</p>
-                <h2>Bienvenue</h2>
-                <p>Ingénierie infrastructures, automatisation et fiabilité: une approche orientée impact, performance et qualité de livraison.</p>
+        <section id="home" class="hero-home">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-pill">Stagiaire Systemes, Reseaux et DevOps</p>
+                    <h1 class="hero-title">Ramdani <span>Khaled</span></h1>
+                    <p class="hero-role">Etudiant en Master 2 IRS</p>
+                    <p class="hero-summary">
+                        Etudiant specialise en administration Linux, automatisation et securite des infrastructures, je construis des environnements fiables de bout en bout.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">Voir Projets</a>
+                        <a href="assets/cv/ramdani-khaled-cv.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Telecharger CV</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="code-window">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="code-lines">
+                            <p>pipeline: deploy-production</p>
+                            <p>stage: build-test-release</p>
+                            <p>infra: terraform apply -auto-approve</p>
+                            <p>cluster: kubernetes / healthy</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-grid">
+
+            <div class="about-grid home-details">
                 <div class="about-text">
                     <p>
-                        Passionné par les <span class="highlight">infrastructures modernes et l'automatisation</span>, je suis un étudiant en Master IRS (Infrastructures et Réseaux de Systèmes) chez Paris Saclay avec une solide expérience pratique en DevOps.
+                        Passionne par les <span class="highlight">infrastructures modernes et l'automatisation</span>, je suis un etudiant en Master IRS (Infrastructures et Reseaux de Systemes) chez Paris Saclay avec une solide experience pratique en DevOps.
                     </p>
                     <p>
-                        Mon expertise s'articule autour de la conception d'<span class="highlight">architectures cloud scalables</span>, l'automatisation d'infrastructures et l'implémentation de pipelines CI/CD robustes. J'aime résoudre des problèmes complexes et optimiser les processus de déploiement.
+                        Mon expertise s'articule autour de la conception d'<span class="highlight">architectures cloud scalables</span>, l'automatisation d'infrastructures et l'implementation de pipelines CI/CD robustes. J'aime resoudre des problemes complexes et optimiser les processus de deploiement.
                     </p>
                     <p>
-                        Au-delà du code et de la configuration, je suis fasciné par la <span class="highlight">culture DevOps</span> et comment elle améliore la collaboration entre équipes. Je crois fermement que l'infrastructure doit être invisible, fiable et auto-cicatrisante.
+                        Au-dela du code et de la configuration, je suis fascine par la <span class="highlight">culture DevOps</span> et comment elle ameliore la collaboration entre equipes. Je crois fermement que l'infrastructure doit etre invisible, fiable et auto-cicatrisante.
                     </p>
                 </div>
                 <div class="about-stats">
@@ -74,6 +97,27 @@
             <div id="interestsPreviewGrid" class="interests-grid interests-preview-grid"></div>
             <div class="cta-buttons">
                 <a href="interests.html" class="btn btn-secondary">Voir tous mes intérêts</a>
+            </div>
+        </section>
+
+        <section class="social-strip" aria-label="Réseaux sociaux">
+            <p class="social-strip-title">RETROUVEZ-MOI</p>
+            <div class="social-strip-links">
+                <a href="https://github.com/RamdaniKhaled" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://gitlab.com/RamdaniKhaled" target="_blank" rel="noopener noreferrer" aria-label="GitLab">
+                    <img src="icons/gitlab-svg.svg" alt="GitLab">
+                </a>
+                <a href="https://www.linkedin.com/in/khaled-ramdani-uvsq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="mailto:khaled.ramdani@ens.uvsq.fr" aria-label="Email">
+                    <img src="icons/gmail.svg" alt="Email">
+                </a>
             </div>
         </section>
     </main>

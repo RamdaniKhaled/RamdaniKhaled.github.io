@@ -48,10 +48,53 @@ async function loadData() {
     }
 }
 
-// Mobile menu toggle (disabled - hamburger removed from headers)
+// Mobile menu toggle
 function setupMobileMenu() {
-    // Menu system disabled - all pages now have simple navigation
-    return;
+    const header = document.querySelector('header');
+    const nav = header ? header.querySelector('nav') : null;
+
+    if (!header || !nav) return;
+
+    if (!header.querySelector('.site-brand')) {
+        const brand = document.createElement('a');
+        brand.href = 'index.html';
+        brand.className = 'site-brand';
+        brand.innerHTML = '<span class="site-brand-badge">KR</span><span class="site-brand-text"><span class="site-brand-name">Khaled Ramdani</span><span class="site-brand-role">Cloud &middot; DevOps &middot; Reseau Systems</span></span>';
+        header.insertBefore(brand, header.firstChild);
+    }
+
+    let menuButton = header.querySelector('.hamburger');
+    if (!menuButton) {
+        menuButton = document.createElement('button');
+        menuButton.type = 'button';
+        menuButton.className = 'hamburger';
+        menuButton.setAttribute('aria-label', 'Ouvrir le menu');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.innerHTML = '<span></span><span></span><span></span>';
+        header.appendChild(menuButton);
+    }
+
+    const closeMenu = () => {
+        nav.classList.remove('active');
+        menuButton.classList.remove('active');
+        menuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    menuButton.addEventListener('click', () => {
+        const open = nav.classList.toggle('active');
+        menuButton.classList.toggle('active', open);
+        menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
 }
 
 // Navigation setup
@@ -65,6 +108,106 @@ function setupNavigation() {
         if (href === currentPage || (currentPage === '' && href === 'index.html')) {
             link.classList.add('nav-active');
         }
+    });
+}
+
+function setupHeaderScrollState() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    const syncHeaderState = () => {
+        header.classList.toggle('header-compact', window.scrollY > 24);
+    };
+
+    syncHeaderState();
+    window.addEventListener('scroll', syncHeaderState, { passive: true });
+}
+
+function setupRevealAnimations() {
+    const revealTargets = document.querySelectorAll(
+        '.page-intro, .content-panel, .project-card, .project-detail-card, .skill-card, .skills-topic-card, .soft-trait-item, .interest-card, .stat-box, .timeline-item, .contact-link, .cv-panel'
+    );
+
+    if (!revealTargets.length) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const observerSupported = typeof IntersectionObserver !== 'undefined';
+
+    revealTargets.forEach((element) => {
+        if (prefersReducedMotion || !observerSupported) {
+            element.classList.add('is-visible');
+            return;
+        }
+
+        element.classList.add('reveal');
+
+        // Ensure above-the-fold content is visible immediately.
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) {
+            element.classList.add('is-visible');
+        }
+    });
+
+    if (prefersReducedMotion || !observerSupported) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.01,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    document.querySelectorAll('.reveal:not(.is-visible)').forEach((element) => observer.observe(element));
+}
+
+function setupCvInlinePreview() {
+    const trigger = document.getElementById('loadCvInline');
+    const frame = document.querySelector('.cv-embed[data-src]');
+    if (!trigger || !frame) return;
+
+    trigger.addEventListener('click', () => {
+        if (frame.dataset.loaded === 'true') return;
+
+        frame.src = frame.dataset.src;
+        frame.dataset.loaded = 'true';
+        trigger.disabled = true;
+        trigger.classList.add('is-disabled');
+        trigger.textContent = 'CV charge';
+    });
+}
+
+function setupSkillsWowHover() {
+    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const cards = document.querySelectorAll('.skills-page .skills-topic-card, .skills-page .soft-trait-item');
+    if (!cards.length) return;
+
+    cards.forEach((card) => {
+        card.addEventListener('pointermove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const px = (x / rect.width) * 100;
+            const py = (y / rect.height) * 100;
+
+            const rx = ((py - 50) / 50) * -2.8;
+            const ry = ((px - 50) / 50) * 3.4;
+
+            card.style.setProperty('--mx', `${px}%`);
+            card.style.setProperty('--my', `${py}%`);
+            card.style.transform = `translateY(-8px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.012)`;
+        });
+
+        card.addEventListener('pointerleave', () => {
+            card.style.removeProperty('--mx');
+            card.style.removeProperty('--my');
+            card.style.removeProperty('transform');
+        });
     });
 }
 
@@ -324,53 +467,57 @@ function setupModalClosing() {
 // Render skills
 function renderSkills() {
     if (!siteData) return;
-    
-    const learnedContainer = document.getElementById('learned-skills');
-    if (learnedContainer && siteData.skills.learned) {
-        const learned = siteData.skills.learned;
-        learnedContainer.innerHTML = `
-            <h3 class="skills-section-title">${learned.title}</h3>
-            <div class="skills-categories">
-                ${Object.values(learned.categories).map(cat => `
-                    <div class="skill-card">
-                        <h3>${cat.title}</h3>
-                        <ul>
-                            ${cat.items.map(item => `<li>${item}</li>`).join('')}
+
+    const renderSkillsStage = (container, stageData, variant) => {
+        if (!container || !stageData) return;
+
+        const categories = Object.values(stageData.categories || {});
+        container.classList.add('skills-stage', `skills-stage-${variant}`);
+        container.innerHTML = `
+            <div class="skills-stage-head">
+                <p class="skills-stage-kicker">${variant === 'learned' ? 'Maitrise' : 'Roadmap'}</p>
+                <h3 class="skills-section-title">${stageData.title}</h3>
+            </div>
+            <div class="skills-categories-premium">
+                ${categories.map(cat => `
+                    <article class="skills-topic-card">
+                        <div class="skills-topic-head">
+                            <h4>${cat.title}</h4>
+                            <span>${Array.isArray(cat.items) ? cat.items.length : 0} items</span>
+                        </div>
+                        <ul class="skills-topic-list">
+                            ${(cat.items || []).map(item => `<li>${item}</li>`).join('')}
                         </ul>
-                    </div>
+                    </article>
                 `).join('')}
             </div>
         `;
+    };
+    
+    const learnedContainer = document.getElementById('learned-skills');
+    if (learnedContainer && siteData.skills.learned) {
+        renderSkillsStage(learnedContainer, siteData.skills.learned, 'learned');
     }
     
     const learningContainer = document.getElementById('learning-skills');
     if (learningContainer && siteData.skills.learning) {
-        const learning = siteData.skills.learning;
-        learningContainer.innerHTML = `
-            <h3 class="skills-section-title">${learning.title}</h3>
-            <div class="skills-categories">
-                ${Object.values(learning.categories).map(cat => `
-                    <div class="skill-card">
-                        <h3>${cat.title}</h3>
-                        <ul>
-                            ${cat.items.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                `).join('')}
-            </div>
-        `;
+        renderSkillsStage(learningContainer, siteData.skills.learning, 'learning');
     }
     
     const softContainer = document.getElementById('soft-skills');
     if (softContainer && siteData.skills.soft_skills) {
         const soft = siteData.skills.soft_skills;
+        softContainer.classList.add('skills-stage', 'skills-stage-soft');
         softContainer.innerHTML = `
-            <h3 class="skills-section-title">${soft.title}</h3>
-            <div class="soft-skills-grid">
+            <div class="skills-stage-head">
+                <p class="skills-stage-kicker">People Skills</p>
+                <h3 class="skills-section-title">${soft.title}</h3>
+            </div>
+            <div class="soft-traits-grid">
                 ${soft.items.map(item => `
-                    <div class="soft-skill-item">
+                    <article class="soft-trait-item">
                         <p>${item}</p>
-                    </div>
+                    </article>
                 `).join('')}
             </div>
         `;
@@ -439,6 +586,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
     
     setupMobileMenu();
+    setupHeaderScrollState();
     setupNavigation();
     renderProfileHeader();
     renderStats();
@@ -461,7 +609,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupProjectSorting();
     setupProjectFilters();
     setupModalClosing();
-    setTimeout(updateContactLinks, 100);
+    setupRevealAnimations();
+    setupCvInlinePreview();
+    setupSkillsWowHover();
+
+    setTimeout(() => {
+        updateContactLinks();
+    }, 100);
 });
 
 // Render detailed projects page

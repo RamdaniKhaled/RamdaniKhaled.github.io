@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "year": "2024 - Présent",
-    "title": "Master IRS - Université Paris Saclay",
-    "description": "Spécialisation en infrastructures cloud, DevOps et administration système. Projets académiques incluant containerisation, orchestration et Infrastructure as Code."
+    "year": "2024 - 2026",
+    "title": "Master - Ingenierie des Reseaux et Systemes (IRS)",
+    "description": "Universite Paris-Saclay - UVSQ. Specialisation en administration Linux, automatisation et securite des infrastructures."
   },
   {
     "id": 2,
-    "year": "2022",
+    "year": "2021 - 2024",
     "title": "Licence Informatique",
-    "description": "Fondamentaux en programmation, réseaux et systèmes. Premiers pas dans l'administration Linux et la sécurité informatique."
+    "description": "Universite UMMTO de Tizi Ouzou (Algerie). Bases solides en programmation, systemes et reseaux."
   }
 ]
