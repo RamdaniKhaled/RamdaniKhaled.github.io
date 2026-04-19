@@ -1,0 +1,11 @@
+{
+  "name": "Ramdani Khaled",
+  "title": "SRE & DevOps Engineer",
+  "subtitle": "Infrastructure • Automation • Cloud • Master IRS - Paris Saclay",
+  "bio": "Passionné par les infrastructures modernes et l'automatisation, je suis un étudiant en Master IRS (Infrastructures et Réseaux de Systèmes) chez Paris Saclay avec une solide expérience pratique en DevOps.",
+  "about": "Je suis un ingénieur DevOps passionné par la création d'infrastructures robustes et scalables. J'aime automatiser les processus répétitifs et construire des pipelines CI/CD efficaces. Mes centres d'intérêt incluent Kubernetes, l'Infrastructure as Code, et les pratiques DevOps qui améliorent la collaboration entre équipes.",
+  "interests": "Cloud Computing, Kubernetes, Infrastructure as Code, CI/CD Automation, Linux, Sécurité Informatique, Open Source",
+  "email": "khaled.ramdani@example.com",
+  "github": "https://github.com/RamdaniKhaled",
+  "linkedin": "https://linkedin.com"
+}

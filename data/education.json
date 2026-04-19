@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "year": "2024 - Présent",
+    "title": "Master IRS - Université Paris Saclay",
+    "description": "Spécialisation en infrastructures cloud, DevOps et administration système. Projets académiques incluant containerisation, orchestration et Infrastructure as Code."
+  },
+  {
+    "id": 2,
+    "year": "2022",
+    "title": "Licence Informatique",
+    "description": "Fondamentaux en programmation, réseaux et systèmes. Premiers pas dans l'administration Linux et la sécurité informatique."
+  }
+]

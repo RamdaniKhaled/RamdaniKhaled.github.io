@@ -1,0 +1,39 @@
+{
+  "intro": {
+    "kicker": "Ce Qui M'Anime",
+    "title": "Intérêts & Curiosités",
+    "description": "Au-delà de l'exécution technique, je m'intéresse aux sujets qui créent de la robustesse, de la clarté et de l'impact durable dans les systèmes."
+  },
+  "items": [
+    {
+      "title": "Cloud Native",
+      "description": "Design de plateformes flexibles, orientées container, avec une forte culture d'automatisation et d'observabilité.",
+      "tags": ["Docker", "Kubernetes", "IaC"]
+    },
+    {
+      "title": "SRE & Fiabilité",
+      "description": "Approches concrètes pour améliorer disponibilité, résilience et temps de récupération des services critiques.",
+      "tags": ["SLO", "Monitoring", "Incident Response"]
+    },
+    {
+      "title": "Sécurité Infra",
+      "description": "Hardening Linux, principes de moindre privilège et intégration de la sécurité dans les pipelines de delivery.",
+      "tags": ["DevSecOps", "Audit", "Compliance"]
+    },
+    {
+      "title": "Performance Systèmes",
+      "description": "Optimisation des ressources, tuning des workloads et amélioration continue des temps de déploiement.",
+      "tags": ["Profiling", "Capacity Planning"]
+    },
+    {
+      "title": "Culture Engineering",
+      "description": "Collaboration inter-equipes, documentation utile, feedback loops rapides et pratiques de travail durables.",
+      "tags": ["DevOps Mindset"]
+    },
+    {
+      "title": "Veille Technologique",
+      "description": "Exploration continue des outils cloud et des patterns d'architecture pour rester pertinent sur le long terme.",
+      "tags": ["Learning by Building"]
+    }
+  ]
+}

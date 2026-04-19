@@ -16,13 +16,18 @@
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
+            <a href="interests.html">Intérêts</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <section id="home">
-            <h2>Bienvenue</h2>
+            <div class="page-intro page-intro-left">
+                <p class="page-kicker">Accueil</p>
+                <h2>Bienvenue</h2>
+                <p>Ingénierie infrastructures, automatisation et fiabilité: une approche orientée impact, performance et qualité de livraison.</p>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
                     <p>
@@ -44,20 +49,38 @@
         </section>
 
         <section id="highlights">
-            <h2>Projets Récents</h2>
+            <div class="page-intro page-intro-left">
+                <p class="page-kicker">Sélection</p>
+                <h2>Projets Récents</h2>
+                <p>Une sélection de réalisations autour du cloud, de Kubernetes et des pipelines CI/CD.</p>
+            </div>
             <div class="projects-grid">
                 <!-- 3 featured projects will be displayed here -->
             </div>
             <div class="cta-buttons">
-                <a href="projects.html" class="btn btn-primary">❯ Voir tous les projets</a>
-                <a href="experience.html" class="btn btn-secondary">✉ Voir mon expérience</a>
+                <a href="projects.html" class="btn btn-primary">Voir tous les projets</a>
+                <a href="experience.html" class="btn btn-secondary">Voir mon expérience</a>
+                <a href="assets/cv/ramdani-khaled-cv.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Télécharger mon CV</a>
+                <a href="mailto:khaled.ramdani@example.com" class="btn btn-primary">M'envoyer un email</a>
+            </div>
+        </section>
+
+        <section id="interests-preview">
+            <div class="page-intro page-intro-left">
+                <p class="page-kicker">Centres d'intérêt</p>
+                <h2>Ce Qui Me Motive</h2>
+                <p>Quelques domaines qui orientent mes choix techniques et ma progression continue.</p>
+            </div>
+            <div id="interestsPreviewGrid" class="interests-grid interests-preview-grid"></div>
+            <div class="cta-buttons">
+                <a href="interests.html" class="btn btn-secondary">Voir tous mes intérêts</a>
             </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
+        <p class="footer-note">Construire des infrastructures robustes, automatisées et fiables.</p>
     </footer>
 
     <!-- Project Modal -->

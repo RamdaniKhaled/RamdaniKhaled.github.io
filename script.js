@@ -1,12 +1,46 @@
 // Global data storage
 let siteData = null;
 let currentSortOrder = 'newest';
+let currentTagFilter = 'all';
+
+const PROJECT_FILTER_GROUPS = [
+    { key: 'all', label: 'Tous' },
+    { key: 'cloud', label: 'Cloud' },
+    { key: 'delivery', label: 'CI/CD & Auto' },
+    { key: 'security', label: 'Sécurité' },
+    { key: 'observability', label: 'Observabilité' },
+    { key: 'infrastructure', label: 'Infrastructure' }
+];
+
+const PROJECT_GROUP_TAGS = {
+    cloud: ['AWS', 'Cloud', 'Kubernetes', 'Migration', 'Terraform', 'IaC', 'Multi-env'],
+    delivery: ['GitLab CI', 'Automation', 'Ansible', 'Bash', 'Python', 'Security Scan'],
+    security: ['Linux Security', 'Compliance', 'Encryption', 'Audit'],
+    observability: ['Monitoring', 'Prometheus', 'Grafana', 'Observabilité', 'ELK'],
+    infrastructure: ['Docker', 'Production', 'Terraform', 'IaC', 'Kubernetes']
+};
 
 // Fetch and load data
 async function loadData() {
     try {
         const response = await fetch('./data.json');
-        siteData = await response.json();
+        const rawData = await response.json();
+
+        // Backward-compatible loader: supports old single JSON and new manifest split.
+        if (rawData && rawData.sources) {
+            const sectionEntries = Object.entries(rawData.sources);
+            const sectionPromises = sectionEntries.map(async ([key, path]) => {
+                const sectionResponse = await fetch(path);
+                const sectionData = await sectionResponse.json();
+                return [key, sectionData];
+            });
+
+            const sectionResults = await Promise.all(sectionPromises);
+            siteData = Object.fromEntries(sectionResults);
+        } else {
+            siteData = rawData;
+        }
+
         return siteData;
     } catch (error) {
         console.error('Error loading data:', error);
@@ -27,9 +61,9 @@ function setupNavigation() {
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
+        link.classList.remove('nav-active');
         if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-            link.style.borderColor = 'rgba(99, 102, 241, 0.8)';
-            link.style.background = 'rgba(99, 102, 241, 0.15)';
+            link.classList.add('nav-active');
         }
     });
 }
@@ -80,7 +114,7 @@ function renderExperience() {
 
 // Sort projects
 function sortProjects(order) {
-    if (!siteData) return siteData.projects;
+    if (!siteData || !Array.isArray(siteData.projects)) return [];
     
     const sorted = [...siteData.projects];
     if (order === 'newest') {
@@ -89,6 +123,15 @@ function sortProjects(order) {
         sorted.sort((a, b) => parseInt(a.date) - parseInt(b.date));
     }
     return sorted;
+}
+
+function getFilteredProjects(projects) {
+    if (currentTagFilter === 'all') return projects;
+
+    const groupTags = PROJECT_GROUP_TAGS[currentTagFilter] || [];
+    return projects.filter(project =>
+        Array.isArray(project.tags) && project.tags.some(tag => groupTags.includes(tag))
+    );
 }
 
 // Render projects on home page (first 3)
@@ -103,7 +146,7 @@ function renderProjects() {
     container.innerHTML = projects.map(project => `
         <div class="project-card clickable" onclick="openProjectModal(${project.id})">
             <div class="project-header">
-                <h3>${project.emoji} ${project.title}</h3>
+                <h3>${project.title}</h3>
             </div>
             <div class="project-content">
                 <p><strong>${project.date}</strong> • ${project.duration}</p>
@@ -111,7 +154,7 @@ function renderProjects() {
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
-                <span class="status-badge ${project.status}">${project.status === 'completed' ? '✓ Completed' : '⏳ In Progress'}</span>
+                <span class="status-badge ${project.status}">${project.status === 'completed' ? 'Terminé' : 'En cours'}</span>
             </div>
         </div>
     `).join('');
@@ -124,12 +167,13 @@ function renderAllProjects() {
     const container = document.querySelector('.projects-grid');
     if (!container) return;
     
-    const projects = sortProjects(currentSortOrder);
+    const sortedProjects = sortProjects(currentSortOrder);
+    const projects = getFilteredProjects(sortedProjects);
     
     container.innerHTML = projects.map(project => `
         <div class="project-card clickable" onclick="openProjectModal(${project.id})">
             <div class="project-header">
-                <h3>${project.emoji} ${project.title}</h3>
+                <h3>${project.title}</h3>
             </div>
             <div class="project-content">
                 <p><strong>${project.date}</strong> • ${project.duration}</p>
@@ -137,7 +181,7 @@ function renderAllProjects() {
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
-                <span class="status-badge ${project.status}">${project.status === 'completed' ? '✓ Completed' : '⏳ In Progress'}</span>
+                <span class="status-badge ${project.status}">${project.status === 'completed' ? 'Terminé' : 'En cours'}</span>
             </div>
         </div>
     `).join('');
@@ -158,8 +202,8 @@ function openProjectModal(projectId) {
     const modalBody = modal.querySelector('.modal-body');
     
     modalHeader.innerHTML = `
-        <h2>${project.emoji} ${project.title}</h2>
-        <span class="modal-status ${project.status}">${project.status === 'completed' ? '✓ Completed' : '⏳ In Progress'}</span>
+        <h2>${project.title}</h2>
+        <span class="modal-status ${project.status}">${project.status === 'completed' ? 'Terminé' : 'En cours'}</span>
         <button class="modal-close" onclick="closeProjectModal()">&times;</button>
     `;
     
@@ -226,6 +270,45 @@ function setupProjectSorting() {
     }
 }
 
+function setupProjectFilters() {
+    if (!siteData || !Array.isArray(siteData.projects)) return;
+
+    const filtersContainer = document.getElementById('projectFilters');
+    if (!filtersContainer) return;
+
+    const availableGroups = PROJECT_FILTER_GROUPS.filter(group => {
+        if (group.key === 'all') return true;
+        const groupTags = PROJECT_GROUP_TAGS[group.key] || [];
+        return siteData.projects.some(project =>
+            Array.isArray(project.tags) && project.tags.some(tag => groupTags.includes(tag))
+        );
+    });
+
+    const filterButtonsHtml = availableGroups.map(group => {
+        const count = group.key === 'all'
+            ? siteData.projects.length
+            : siteData.projects.filter(project =>
+                Array.isArray(project.tags) && project.tags.some(tag => (PROJECT_GROUP_TAGS[group.key] || []).includes(tag))
+            ).length;
+        const activeClass = group.key === 'all' ? ' active' : '';
+        return `<button class="filter-btn${activeClass}" data-filter="${group.key}">${group.label} (${count})</button>`;
+    }).join('');
+
+    filtersContainer.innerHTML = filterButtonsHtml;
+
+    filtersContainer.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedFilter = button.getAttribute('data-filter');
+            if (!selectedFilter) return;
+
+            currentTagFilter = selectedFilter;
+            filtersContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            renderAllProjects();
+        });
+    });
+}
+
 // Close modal when clicking outside
 function setupModalClosing() {
     const modal = document.getElementById('projectModal');
@@ -250,7 +333,7 @@ function renderSkills() {
             <div class="skills-categories">
                 ${Object.values(learned.categories).map(cat => `
                     <div class="skill-card">
-                        <h3>${cat.emoji} ${cat.title}</h3>
+                        <h3>${cat.title}</h3>
                         <ul>
                             ${cat.items.map(item => `<li>${item}</li>`).join('')}
                         </ul>
@@ -268,7 +351,7 @@ function renderSkills() {
             <div class="skills-categories">
                 ${Object.values(learning.categories).map(cat => `
                     <div class="skill-card">
-                        <h3>${cat.emoji} ${cat.title}</h3>
+                        <h3>${cat.title}</h3>
                         <ul>
                             ${cat.items.map(item => `<li>${item}</li>`).join('')}
                         </ul>
@@ -309,6 +392,48 @@ function renderStats() {
     `).join('');
 }
 
+function renderInterests() {
+    if (!siteData || !siteData.interests) return;
+
+    const interestsData = siteData.interests;
+    const kicker = document.getElementById('interestsKicker');
+    const title = document.getElementById('interestsTitle');
+    const description = document.getElementById('interestsDescription');
+    const grid = document.getElementById('interestsGrid');
+
+    if (interestsData.intro) {
+        if (kicker) kicker.textContent = interestsData.intro.kicker;
+        if (title) title.textContent = interestsData.intro.title;
+        if (description) description.textContent = interestsData.intro.description;
+    }
+
+    if (!grid || !Array.isArray(interestsData.items)) return;
+
+    grid.innerHTML = interestsData.items.map((item) => `
+        <article class="interest-card">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <span>${Array.isArray(item.tags) ? item.tags.join(', ') : ''}</span>
+        </article>
+    `).join('');
+}
+
+function renderHomeInterestsPreview() {
+    if (!siteData || !siteData.interests || !Array.isArray(siteData.interests.items)) return;
+
+    const container = document.getElementById('interestsPreviewGrid');
+    if (!container) return;
+
+    const previewItems = siteData.interests.items.slice(0, 3);
+    container.innerHTML = previewItems.map((item) => `
+        <article class="interest-card">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <span>${Array.isArray(item.tags) ? item.tags.join(', ') : ''}</span>
+        </article>
+    `).join('');
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
@@ -330,8 +455,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderEducation();
     renderExperience();
     renderSkills();
+    renderInterests();
+    renderHomeInterestsPreview();
+    renderDetailedProjects();
     setupProjectSorting();
+    setupProjectFilters();
     setupModalClosing();
+    setTimeout(updateContactLinks, 100);
 });
 
 // Render detailed projects page
@@ -346,7 +476,7 @@ function renderDetailedProjects() {
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
-                    <h3>${project.emoji} ${project.title}</h3>
+                    <h3>${project.title}</h3>
                 </div>
             </div>
             <div class="project-detail-content">
@@ -362,24 +492,6 @@ function renderDetailedProjects() {
     `).join('');
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadData();
-    setupNavigation();
-    
-    // Only render on the homepage
-    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
-        renderProfileHeader();
-        renderStats();
-    }
-    
-    // Render sections if they exist
-    renderExperience();
-    renderProjects();
-    renderSkills();
-    renderDetailedProjects();
-});
-
 // Update profile links
 function updateContactLinks() {
     if (!siteData) return;
@@ -388,24 +500,27 @@ function updateContactLinks() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     const githubLinks = document.querySelectorAll('a[href*="github"]');
     const linkedinLinks = document.querySelectorAll('a[href*="linkedin"]');
+
+    const isPlainTextLink = (link) => !link.querySelector('img') && !link.querySelector('h1, h2, h3, h4, h5, h6, p, div, span');
     
     emailLinks.forEach(link => {
         link.href = `mailto:${profile.email}`;
-        link.textContent = profile.email;
+        if (isPlainTextLink(link)) {
+            link.textContent = profile.email;
+        }
     });
     
     githubLinks.forEach(link => {
         link.href = profile.github;
-        link.textContent = 'RamdaniKhaled';
+        if (isPlainTextLink(link)) {
+            link.textContent = 'RamdaniKhaled';
+        }
     });
     
     linkedinLinks.forEach(link => {
         link.href = profile.linkedin;
-        link.textContent = 'Ramdani Khaled';
+        if (isPlainTextLink(link)) {
+            link.textContent = 'Ramdani Khaled';
+        }
     });
 }
-
-// Re-run this after loading data
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(updateContactLinks, 100);
-});

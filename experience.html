@@ -16,13 +16,18 @@
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
+            <a href="interests.html">Intérêts</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <section id="experience">
-            <h2>Expérience Professionnelle</h2>
+            <div class="page-intro">
+                <p class="page-kicker">Experience</p>
+                <h2>Expérience Professionnelle</h2>
+                <p>Une trajectoire centrée sur Linux, CI/CD et l'industrialisation progressive des pratiques DevOps.</p>
+            </div>
             <div class="experience-timeline">
                 <!-- Dynamically loaded from data.json -->
             </div>
@@ -30,14 +35,14 @@
 
         <section id="journey">
             <h2>Mon Parcours</h2>
-            <div style="max-width: 900px; margin: 40px auto; background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
-                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2; margin-bottom: 20px;">
+            <div class="content-panel">
+                <p class="panel-text">
                     Mon expérience professionnelle a commencé par une licence en informatique, où j'ai acquis les fondamentaux. Ensuite, j'ai eu l'opportunité d'intégrer des environnements professionnels en tant qu'administrateur système junior, ce qui m'a permis de maîtriser l'administration Linux et la gestion d'infrastructure.
                 </p>
-                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2; margin-bottom: 20px;">
+                <p class="panel-text">
                     Rapidement, j'ai découvert ma passion pour l'automatisation et le DevOps. Mon stage DevOps m'a permis de mettre en place des pipelines CI/CD complets, d'explorer Kubernetes et d'approfondir mes connaissances en Infrastructure as Code. Actuellement, en Master IRS, je consolide mes acquis tout en explorant des domaines plus avancés comme le service mesh et la sécurité des infrastructures cloud.
                 </p>
-                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2;">
+                <p class="panel-text">
                     Mon objectif est de devenir un ingénieur SRE/DevOps senior capable de concevoir et de déployer des infrastructures hautement disponibles, sécurisées et auto-cicatrisantes.
                 </p>
             </div>
@@ -46,7 +51,7 @@
 
     <footer>
         <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
+        <p class="footer-note">Construire des infrastructures robustes, automatisées et fiables.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -16,13 +16,18 @@
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
+            <a href="interests.html">Intérêts</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <section id="education">
-            <h2>Mon Parcours Académique</h2>
+            <div class="page-intro">
+                <p class="page-kicker">Formation</p>
+                <h2>Mon Parcours Académique</h2>
+                <p>Un parcours progressif entre fondamentaux informatiques, administration système et spécialisation DevOps.</p>
+            </div>
             <div class="education-timeline">
                 <!-- Dynamically loaded from data.json -->
             </div>
@@ -30,20 +35,20 @@
 
         <section id="learning-path">
             <h2>Mon Chemin d'Apprentissage</h2>
-            <div style="max-width: 900px; margin: 40px auto;">
-                <p style="color: var(--text-light); font-size: 1.05em; line-height: 2; margin-bottom: 30px;">
+            <div class="content-panel">
+                <p class="panel-text">
                     Mon parcours académique a débuté par des fondamentaux solides en informatique. Puis, au fil de mes études, j'ai progressivement spécialisé vers les infrastructures et les systèmes, découvrant ma véritable passion pour DevOps et le cloud-native.
                 </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
-                    <div style="background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%); color: white; padding: 30px; border-radius: 12px;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.2em;">🎓 Licence Informatique</h3>
-                        <p style="opacity: 0.9; line-height: 1.8;">
+                <div class="highlight-grid">
+                    <div class="highlight-card">
+                        <h3>Licence Informatique</h3>
+                        <p>
                             Fondamentaux en programmation, réseaux, systèmes et bases de données. Premiers pas dans l'administration Linux et la sécurité informatique.
                         </p>
                     </div>
-                    <div style="background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%); color: white; padding: 30px; border-radius: 12px;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.2em;">🔬 Master IRS</h3>
-                        <p style="opacity: 0.9; line-height: 1.8;">
+                    <div class="highlight-card">
+                        <h3>🔬 Master IRS</h3>
+                        <p>
                             Spécialisation approfondie en infrastructures cloud, DevOps, administration système avancée. Projets pratiques en containerisation et orchestration.
                         </p>
                     </div>
@@ -54,7 +59,7 @@
 
     <footer>
         <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
+        <p class="footer-note">Construire des infrastructures robustes, automatisées et fiables.</p>
     </footer>
 
     <script src="script.js"></script>

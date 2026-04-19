@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "year": "2023 - 2024",
+    "title": "Stagiaire DevOps",
+    "description": "Mise en place d'infrastructure Docker, création de pipelines CI/CD avec GitLab CI, automatisation du provisioning avec Ansible et scripts Bash."
+  },
+  {
+    "id": 2,
+    "year": "2022 - 2023",
+    "title": "Administrateur Système Junior",
+    "description": "Gestion de serveurs Linux (Ubuntu, CentOS), maintenance d'infrastructure, configuration de firewalls et monitoring avec des outils open-source."
+  }
+]

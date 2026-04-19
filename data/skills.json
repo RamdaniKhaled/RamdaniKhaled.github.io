@@ -1,0 +1,115 @@
+{
+  "learned": {
+    "title": "Compétences Maîtrisées",
+    "categories": {
+      "infrastructure": {
+        "title": "Cloud & Infrastructure",
+        "items": [
+          "Docker & Containerisation",
+          "Kubernetes (déploiement & scaling)",
+          "AWS / GCP / Azure basics",
+          "Terraform (IaC)",
+          "Load Balancing & Reverse Proxy"
+        ]
+      },
+      "cicd": {
+        "title": "CI/CD & Automatisation",
+        "items": [
+          "GitHub Actions & GitLab CI",
+          "Jenkins pipelines",
+          "Ansible playbooks",
+          "Bash scripting avancé",
+          "Infrastructure Provisioning"
+        ]
+      },
+      "linux": {
+        "title": "Linux & Systèmes",
+        "items": [
+          "Ubuntu, CentOS, Debian",
+          "Gestion des services & processus",
+          "Sécurité système & hardening",
+          "Monitoring (Prometheus, ELK)",
+          "Performance tuning"
+        ]
+      },
+      "network": {
+        "title": "Réseaux & Sécurité",
+        "items": [
+          "VPC & Network segmentation",
+          "Firewalls & iptables",
+          "SSL/TLS certificates",
+          "VPN & tunneling",
+          "DNS & reverse proxy"
+        ]
+      },
+      "languages": {
+        "title": "Langages & Outils",
+        "items": [
+          "Bash / Shell scripting",
+          "Python for automation",
+          "Git & version control",
+          "Docker Compose",
+          "Linux command line mastery"
+        ]
+      },
+      "monitoring": {
+        "title": "Monitoring & Observabilité",
+        "items": [
+          "Prometheus & Grafana",
+          "ELK Stack (Elasticsearch, Logstash)",
+          "Alert management",
+          "Distributed tracing",
+          "Custom dashboards"
+        ]
+      }
+    }
+  },
+  "learning": {
+    "title": "En Train d'Apprendre",
+    "categories": {
+      "advanced": {
+        "title": "Technologies Avancées",
+        "items": [
+          "Service Mesh (Istio, Linkerd)",
+          "Advanced Kubernetes (operators, CRDs)",
+          "GitOps (ArgoCD, Flux)",
+          "Observability (OpenTelemetry)",
+          "eBPF & Advanced Networking"
+        ]
+      },
+      "platforms": {
+        "title": "Plateformes Cloud",
+        "items": [
+          "AWS (Services avancés)",
+          "Google Cloud Platform (GCP)",
+          "Azure DevOps",
+          "Kubernetes Distros (EKS, GKE, AKS)",
+          "Multi-cloud strategies"
+        ]
+      },
+      "languages_new": {
+        "title": "Nouveaux Langages",
+        "items": [
+          "Go (Golang)",
+          "Rust for systems",
+          "TypeScript",
+          "Java for cloud apps",
+          "Kotlin"
+        ]
+      }
+    }
+  },
+  "soft_skills": {
+    "title": "Compétences Transversales",
+    "items": [
+      "Leadership & Mentorat",
+      "Communication Technique",
+      "Résolution de Problèmes",
+      "Gestion de Projet Agile",
+      "Documentation & Knowledge Sharing",
+      "Travail en Équipe",
+      "Pensée Critique",
+      "Apprentissage Continu"
+    ]
+  }
+}

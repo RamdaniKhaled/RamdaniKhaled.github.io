@@ -16,17 +16,23 @@
             <a href="experience.html">Expérience</a>
             <a href="projects.html">Projets</a>
             <a href="skills.html">Compétences</a>
+            <a href="interests.html">Intérêts</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main class="container">
         <section id="projects">
-            <h2>Mes Projets & Réalisations</h2>
-            <div class="projects-controls">
-                <button id="sortNewest" class="sort-btn active">📅 Plus Récents</button>
-                <button id="sortOldest" class="sort-btn">📅 Plus Anciens</button>
+            <div class="page-intro">
+                <p class="page-kicker">Portfolio Technique</p>
+                <h2>Mes Projets & Réalisations</h2>
+                <p>Explorez mes projets triés par date, avec un focus sur architecture, automatisation et mise en production.</p>
             </div>
+            <div class="projects-controls">
+                <button id="sortNewest" class="sort-btn active">Plus Récents</button>
+                <button id="sortOldest" class="sort-btn">Plus Anciens</button>
+            </div>
+            <div id="projectFilters" class="projects-controls"></div>
             <div class="projects-grid">
                 <!-- All projects dynamically loaded from data.json -->
             </div>
@@ -36,7 +42,7 @@
 
     <footer>
         <p>&copy; 2026 Ramdani Khaled. Ingénieur DevOps & SRE en devenir.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Construire des infrastructures robustes, automatisées et fiables.</p>
+        <p class="footer-note">Construire des infrastructures robustes, automatisées et fiables.</p>
     </footer>
 
     <!-- Project Modal -->
