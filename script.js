@@ -5,20 +5,96 @@ let currentTagFilter = 'all';
 
 const PROJECT_FILTER_GROUPS = [
     { key: 'all', label: 'Tous' },
-    { key: 'cloud', label: 'Cloud' },
-    { key: 'delivery', label: 'CI/CD & Auto' },
-    { key: 'security', label: 'Sécurité' },
-    { key: 'observability', label: 'Observabilité' },
-    { key: 'infrastructure', label: 'Infrastructure' }
+    { key: 'web', label: 'Web' },
+    { key: 'backend', label: 'Backend & DB' },
+    { key: 'network', label: 'Reseaux & Protocoles' },
+    { key: 'security', label: 'Securite' },
+    { key: 'systems', label: 'Systemes & Infra' }
 ];
 
 const PROJECT_GROUP_TAGS = {
-    cloud: ['AWS', 'Cloud', 'Kubernetes', 'Migration', 'Terraform', 'IaC', 'Multi-env'],
-    delivery: ['GitLab CI', 'Automation', 'Ansible', 'Bash', 'Python', 'Security Scan'],
-    security: ['Linux Security', 'Compliance', 'Encryption', 'Audit'],
-    observability: ['Monitoring', 'Prometheus', 'Grafana', 'Observabilité', 'ELK'],
-    infrastructure: ['Docker', 'Production', 'Terraform', 'IaC', 'Kubernetes']
+    web: ['HTML', 'CSS', 'JavaScript', 'Next.js', 'E-commerce', 'UI/UX'],
+    backend: ['PHP', 'Node.js', 'TypeScript', 'SQL', 'Authentication', 'REST API', 'Database Design'],
+    network: ['TCP/IP', 'FTP', '5G Core', 'NRF', 'Simulation', 'Cyber Threat Intelligence'],
+    security: ['Security', 'AI Moderation', 'Content Moderation', 'Threat Analysis'],
+    systems: ['VMware', 'Virtualization', 'Containers', 'Linux', 'Python', 'Java']
 };
+
+const MONTHS_MAP = {
+    janvier: 1,
+    january: 1,
+    fevrier: 2,
+    february: 2,
+    mars: 3,
+    march: 3,
+    avril: 4,
+    april: 4,
+    mai: 5,
+    may: 5,
+    juin: 6,
+    june: 6,
+    juillet: 7,
+    july: 7,
+    aout: 8,
+    august: 8,
+    septembre: 9,
+    september: 9,
+    octobre: 10,
+    october: 10,
+    novembre: 11,
+    november: 11,
+    decembre: 12,
+    december: 12
+};
+
+function normalizeMonthLabel(value) {
+    if (!value) return '';
+    return value
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+}
+
+function toSortKey(year, month) {
+    const safeYear = Number.isFinite(year) ? year : 0;
+    const safeMonth = Number.isFinite(month) ? month : 1;
+    return safeYear * 100 + safeMonth;
+}
+
+function parseProjectSortKey(project) {
+    if (!project) return 0;
+
+    if (typeof project.startDate === 'string') {
+        const startMatch = project.startDate.match(/^(\d{4})-(\d{2})$/);
+        if (startMatch) {
+            const year = parseInt(startMatch[1], 10);
+            const month = parseInt(startMatch[2], 10);
+            return toSortKey(year, month);
+        }
+    }
+
+    if (typeof project.duration === 'string') {
+        const normalizedDuration = normalizeMonthLabel(project.duration);
+        const monthNames = Object.keys(MONTHS_MAP).join('|');
+        const monthYearPattern = new RegExp(`\\b(${monthNames})\\b\\s*(\\d{4})`);
+        const match = normalizedDuration.match(monthYearPattern);
+        if (match) {
+            const month = MONTHS_MAP[match[1]] || 1;
+            const year = parseInt(match[2], 10);
+            return toSortKey(year, month);
+        }
+    }
+
+    if (typeof project.date === 'string') {
+        const yearMatch = project.date.match(/(\d{4})/);
+        if (yearMatch) {
+            return toSortKey(parseInt(yearMatch[1], 10), 1);
+        }
+    }
+
+    return 0;
+}
 
 // Fetch and load data
 async function loadData() {
@@ -261,9 +337,9 @@ function sortProjects(order) {
     
     const sorted = [...siteData.projects];
     if (order === 'newest') {
-        sorted.sort((a, b) => parseInt(b.date) - parseInt(a.date));
+        sorted.sort((a, b) => parseProjectSortKey(b) - parseProjectSortKey(a));
     } else if (order === 'oldest') {
-        sorted.sort((a, b) => parseInt(a.date) - parseInt(b.date));
+        sorted.sort((a, b) => parseProjectSortKey(a) - parseProjectSortKey(b));
     }
     return sorted;
 }
@@ -350,11 +426,17 @@ function openProjectModal(projectId) {
         <button class="modal-close" onclick="closeProjectModal()">&times;</button>
     `;
     
-    const imagesHtml = project.images.map(img => `
-        <div class="modal-image">
-            <img src="${img}" alt="${project.title}">
-        </div>
-    `).join('');
+    const images = Array.isArray(project.images)
+        ? project.images
+        : (project.image ? [project.image] : []);
+
+    const imagesHtml = images.length
+        ? images.map(img => `
+            <div class="modal-image">
+                <img src="${img}" alt="${project.title}">
+            </div>
+        `).join('')
+        : '<p>Aucune image disponible pour ce projet.</p>';
     
     modalBody.innerHTML = `
         <div class="modal-gallery">
@@ -625,14 +707,28 @@ function renderDetailedProjects() {
     const container = document.querySelector('.projects-detailed-grid');
     if (!container) return;
     
-    container.innerHTML = siteData.projects.map(project => `
-        <div class="project-detail-card">
+    container.innerHTML = siteData.projects.map(project => {
+        const imageBlock = project.image
+            ? `
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
                     <h3>${project.title}</h3>
                 </div>
             </div>
+            `
+            : `
+            <div class="project-image project-image-empty">
+                <div class="project-overlay">
+                    <h3>${project.title}</h3>
+                    <p>Visuel bientot disponible</p>
+                </div>
+            </div>
+            `;
+
+        return `
+        <div class="project-detail-card">
+            ${imageBlock}
             <div class="project-detail-content">
                 <h3>${project.title}</h3>
                 <p class="duration"><strong>Durée:</strong> ${project.duration}</p>
@@ -643,7 +739,8 @@ function renderDetailedProjects() {
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 // Update profile links

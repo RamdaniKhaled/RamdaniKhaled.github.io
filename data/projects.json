@@ -1,81 +1,180 @@
 [
   {
     "id": 1,
-    "title": "Pipeline GitOps DevSecOps",
-    "duration": "Avril 2026",
-    "date": "2026",
+    "title": "Site E-Learning & E-Commerce",
+    "duration": "Mars 2023",
+    "date": "2023",
+    "startDate": "2023-03",
     "status": "completed",
-    "description": "Developpement et conteneurisation d'une API REST Node.js (Express), provisionnement AWS EC2 (k3s) avec Terraform, deploiement Kubernetes avec Helm, puis synchronisation GitOps avec ArgoCD.",
+    "description": "Premier projet de developpement web realise en Licence 2: creation d'un site e-learning avec des sections e-commerce.",
     "tags": [
-      "Node.js",
-      "Express",
-      "Docker",
-      "Terraform",
-      "AWS",
-      "k3s",
-      "Kubernetes",
-      "Helm",
-      "GitOps",
-      "ArgoCD",
-      "GitLab CI",
-      "Semgrep",
-      "Trivy"
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "E-commerce",
+      "UI/UX"
     ],
-    "details": "Pipeline de bout en bout orientee DevSecOps: build Docker multi-stage, deploiement Kubernetes via Helm, et automatisation GitOps avec ArgoCD a chaque push Git. Une chaine de securite complete a ete integree dans GitLab CI avec SAST (Semgrep) et scan d'images (Trivy).",
-    "image": "assets/projects/project-gitlab-cicd-1.jpg",
-    "images": [
-      "assets/projects/project-gitlab-cicd-1.jpg",
-      "assets/projects/project-gitlab-cicd-2.jpg"
-    ]
+    "details": "Ce projet marque ma premiere introduction au developpement web. J'ai construit la structure front-end, organise les pages produit/contenu et compris les bases du responsive design et de l'interactivite en JavaScript.",
+    "images": []
   },
   {
     "id": 2,
-    "title": "Pipeline DevSecOps et Observabilite",
-    "duration": "Mars 2026",
-    "date": "2026",
+    "title": "YouTube Clone (Personal Project)",
+    "duration": "Juin 2023",
+    "date": "2023",
+    "startDate": "2023-06",
     "status": "completed",
-    "description": "Creation d'un microservice Python (Flask) expose avec metriques systeme via psutil, automatise par GitLab CI, puis deploiement local (WSL2) avec supervision Prometheus/Grafana et alerting Telegram.",
+    "description": "Clone de YouTube en projet personnel pour consolider mes acquis front-end en HTML, CSS et JavaScript.",
     "tags": [
-      "Python",
-      "Flask",
-      "psutil",
-      "GitLab CI",
-      "Docker",
-      "Trivy",
-      "WSL2",
-      "Prometheus",
-      "Grafana",
-      "Alertmanager",
-      "Telegram"
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design"
     ],
-    "details": "Projet axe observabilite et securite: build et scan d'images Docker dans GitLab CI, deploiement automatise sur environnement local avec GitLab Runner, orchestration de la stack de monitoring et alerting temps reel sur Telegram.",
-    "image": "assets/projects/project-monitoring-1.jpg",
-    "images": [
-      "assets/projects/project-monitoring-1.jpg",
-      "assets/projects/project-monitoring-2.jpg"
-    ]
+    "details": "Objectif principal: renforcer la maitrise du layout, de la mise en page dynamique et des interactions utilisateur. J'ai reproduit une interface type media platform pour progresser sur le design et la logique front-end.",
+    "images": []
   },
   {
     "id": 3,
-    "title": "Integration Active Directory et Nextcloud",
-    "duration": "Janvier 2026 - Fevrier 2026",
-    "date": "2026",
+    "title": "Plateforme de Gestion de Gare Routiere",
+    "duration": "Mai 2024 - Juin 2024",
+    "date": "2024",
+    "startDate": "2024-05",
+    "endDate": "2024-06",
     "status": "completed",
-    "description": "Conception d'une architecture multi-forets sous Windows Server 2025, deploiement Nextcloud sur Ubuntu 24.04, et authentification centralisee AD via LDAPS.",
+    "description": "Projet de groupe en Licence 3: application web pour la gestion des trajets, reservations, espace conducteur et administration complete.",
     "tags": [
-      "Active Directory",
-      "Windows Server",
-      "Ubuntu",
-      "Nextcloud",
-      "LDAPS",
-      "DNS",
-      "Failover"
+      "PHP",
+      "SQL",
+      "Database Design",
+      "Authentication",
+      "Reservation System",
+      "Admin Dashboard"
     ],
-    "details": "Mise en place de domaines enfants, RODC et relations d'approbation, puis integration de Nextcloud avec synchronisation automatique des groupes AD. Validation de la tolerance aux pannes (failover DC) et de la resolution DNS inter-domaines.",
-    "image": "assets/projects/project-kubernetes-1.jpg",
-    "images": [
-      "assets/projects/project-kubernetes-1.jpg",
-      "assets/projects/project-kubernetes-2.jpg"
-    ]
+    "details": "J'ai pris en charge tout le backend et la base de donnees. Le systeme permettait de consulter les trajets par date, reserver des places, offrir un espace conducteur pour suivre les affectations et un espace admin pour gerer trajets, conducteurs et donnees metier.",
+    "images": []
+  },
+  {
+    "id": 4,
+    "title": "Jeu de Cartes Zheng Fen (Java)",
+    "duration": "Octobre 2024",
+    "date": "2024",
+    "startDate": "2024-10",
+    "status": "completed",
+    "description": "Projet Master 1 centre sur la conception objet en Java avec implementation du jeu de cartes Zheng Fen et ses regles specifiques.",
+    "tags": [
+      "Java",
+      "OOP",
+      "Game Logic",
+      "Software Design"
+    ],
+    "details": "Le livrable insistait sur les choix de conception objet plutot que sur la seule fonctionnalite. Le projet m'a permis de structurer les classes, encapsuler les regles complexes et argumenter les decisions d'architecture logicielle.",
+    "images": []
+  },
+  {
+    "id": 5,
+    "title": "Twist - Twitter Clone Full-Stack",
+    "duration": "Fevrier 2025 - Mars 2025",
+    "date": "2025",
+    "startDate": "2025-02",
+    "endDate": "2025-03",
+    "status": "completed",
+    "description": "Projet Master 1 en equipe: clone Twitter avec Node.js, Next.js et TypeScript, deploiement Vercel et volet securite avance.",
+    "tags": [
+      "Node.js",
+      "Next.js",
+      "TypeScript",
+      "Security",
+      "AI Moderation",
+      "Vercel"
+    ],
+    "details": "Projet complet avec veille technologique hebdomadaire. Nous avons integre un module IA pour evaluer posts et images, et meme les messages prives selon un parametre activable par l'utilisateur. Le projet couvrait front-end, backend, securite et deploiement.",
+    "images": []
+  },
+  {
+    "id": 6,
+    "title": "Simulation du Protocole TCP/IP",
+    "duration": "Avril 2025",
+    "date": "2025",
+    "startDate": "2025-04",
+    "status": "completed",
+    "description": "Projet Master 1 en Python: simulation detaillee du protocole TCP/IP avec communication reseau reelle.",
+    "tags": [
+      "Python",
+      "TCP/IP",
+      "Networking",
+      "Protocol Simulation"
+    ],
+    "details": "Le travail reproduisait le comportement du protocole avec une logique proche d'un scenario reel. Cela a renforce ma comprehension des couches reseau, des echanges de paquets et des mecanismes de communication fiable.",
+    "images": []
+  },
+  {
+    "id": 7,
+    "title": "Presentation Academique NRF du 5G Core",
+    "duration": "Decembre 2025",
+    "date": "2025",
+    "startDate": "2025-12",
+    "status": "completed",
+    "description": "Projet Master 2: presentation technique de la fonction NRF (Network Repository Function) dans l'architecture 5G Core.",
+    "tags": [
+      "5G Core",
+      "NRF",
+      "Network Architecture",
+      "Technical Presentation"
+    ],
+    "details": "Analyse du role de la NRF dans le coeur 5G, de ses interactions avec les autres fonctions et des enjeux de decouverte de services dans les architectures telecom modernes.",
+    "images": []
+  },
+  {
+    "id": 8,
+    "title": "VMware: Virtualisation vs Containers",
+    "duration": "Janvier 2026",
+    "date": "2026",
+    "startDate": "2026-01",
+    "status": "completed",
+    "description": "Projet Master 2: etude comparee entre virtualisation classique (VMware) et approche conteneurs.",
+    "tags": [
+      "VMware",
+      "Virtualization",
+      "Containers",
+      "Infrastructure"
+    ],
+    "details": "La presentation comparait performances, isolation, cout operationnel et cas d'usage entre machines virtuelles et conteneurs, avec un angle architecture d'infrastructure.",
+    "images": []
+  },
+  {
+    "id": 9,
+    "title": "Cyber Threat Intelligence (CTI)",
+    "duration": "Fevrier 2026",
+    "date": "2026",
+    "startDate": "2026-02",
+    "status": "completed",
+    "description": "Projet Master 2 avec presentation sur la Cyber Threat Intelligence et l'exploitation des informations de menace.",
+    "tags": [
+      "Cyber Threat Intelligence",
+      "Threat Analysis",
+      "Security",
+      "Presentation"
+    ],
+    "details": "Travail axe sur la collecte, la qualification et l'utilisation d'indicateurs de compromission pour une meilleure anticipation des risques cyber.",
+    "images": []
+  },
+  {
+    "id": 10,
+    "title": "Simulation Serveur FTP en Python",
+    "duration": "Mars 2026",
+    "date": "2026",
+    "startDate": "2026-03",
+    "status": "completed",
+    "description": "Projet Master 2: developpement d'un programme Python jouant le role de serveur et client FTP pour upload/download de fichiers.",
+    "tags": [
+      "Python",
+      "FTP",
+      "Sockets",
+      "File Transfer",
+      "Client-Server"
+    ],
+    "details": "Simulation complete des operations d'envoi et de reception de fichiers entre client et serveur, avec gestion de la connexion et des commandes de transfert.",
+    "images": []
   }
 ]

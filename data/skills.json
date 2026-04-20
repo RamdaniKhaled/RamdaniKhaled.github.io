@@ -2,57 +2,57 @@
   "learned": {
     "title": "Competences Techniques",
     "categories": {
-      "network": {
-        "title": "Reseaux",
+      "frontend": {
+        "title": "Developpement Front-End",
         "items": [
-          "TCP/IP",
-          "VLAN",
-          "DHCP",
-          "DNS",
-          "Routage",
-          "Wireshark",
-          "Nmap"
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Responsive Design",
+          "UI Integration"
         ]
       },
-      "systems": {
-        "title": "Systemes",
+      "backend": {
+        "title": "Back-End et Base de Donnees",
         "items": [
-          "Linux (Ubuntu/Debian)",
-          "Windows Server",
-          "WSL2",
-          "VirtualBox",
-          "Bash scripting"
-        ]
-      },
-      "cloud_devops": {
-        "title": "Cloud et DevOps",
-        "items": [
-          "Docker",
-          "Kubernetes (k3s/Minikube)",
-          "Helm",
-          "Terraform (AWS)",
-          "CI/CD (GitLab CI/CD)",
-          "GitOps (ArgoCD)",
-          "Semgrep",
-          "Trivy"
-        ]
-      },
-      "observability": {
-        "title": "Observabilite",
-        "items": [
-          "Prometheus",
-          "Grafana",
-          "Alerting (Telegram API/Alertmanager)",
-          "Monitoring"
+          "PHP",
+          "Node.js",
+          "TypeScript",
+          "SQL",
+          "Conception de base de donnees",
+          "Authentification et gestion des roles",
+          "API et logique metier"
         ]
       },
       "programming": {
-        "title": "Programmation et Bases de donnees",
+        "title": "Programmation et Conception Logicielle",
         "items": [
+          "Java",
           "Python",
-          "SQL",
-          "Git",
-          "Developpement web full-stack"
+          "Programmation orientee objet (OOP)",
+          "Conception objet et architecture logicielle",
+          "Simulation client-serveur"
+        ]
+      },
+      "network_security": {
+        "title": "Reseaux, Protocoles et Securite",
+        "items": [
+          "TCP/IP",
+          "FTP",
+          "Analyse de protocoles reseau",
+          "Cyber Threat Intelligence (CTI)",
+          "Moderation de contenu assistee par IA",
+          "Principes de securite applicative"
+        ]
+      },
+      "systems_cloud": {
+        "title": "Systemes et Infrastructure",
+        "items": [
+          "VMware",
+          "Virtualisation",
+          "Containers",
+          "Notions 5G Core (NRF)",
+          "Deploiement web sur Vercel"
         ]
       }
     }
@@ -60,20 +60,20 @@
   "learning": {
     "title": "Approfondissement en Cours",
     "categories": {
-      "devsecops": {
-        "title": "DevSecOps avance",
+      "architecture": {
+        "title": "Architecture et Securite avancees",
         "items": [
-          "Securite des pipelines CI/CD",
-          "Automatisation des controles SAST et image scanning",
-          "Bonnes pratiques GitOps en environnement production"
+          "Patterns d'architecture pour applications distribuees",
+          "Approfondissement des mecanismes de securite web",
+          "Strategies de moderation intelligente de contenu"
         ]
       },
-      "platform": {
-        "title": "Plateformes et exploitation",
+      "networking": {
+        "title": "Systemes, Reseaux et Performance",
         "items": [
-          "Administration Kubernetes en contexte reel",
-          "Fiabilite des infrastructures hybrides Linux/Windows",
-          "Observabilite orientee alerting temps reel"
+          "Protocoles reseau avances et optimisation",
+          "Cyber defense orientee renseignement de menace",
+          "Comparaison pratique VM, conteneurs et orchestrateurs"
         ]
       }
     }
@@ -85,6 +85,7 @@
       "Autonomie",
       "Travail en equipe",
       "Communication technique",
+      "Veille technologique",
       "Rigueur",
       "Apprentissage continu"
     ]
