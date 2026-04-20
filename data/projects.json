@@ -176,5 +176,132 @@
     ],
     "details": "Simulation complete des operations d'envoi et de reception de fichiers entre client et serveur, avec gestion de la connexion et des commandes de transfert.",
     "images": []
+  },
+  {
+    "id": 11,
+    "title": "Simulation DNS et Automatisation de Reseau",
+    "duration": "Avril 2025 - Mai 2025",
+    "date": "2025",
+    "startDate": "2025-04",
+    "endDate": "2025-05",
+    "status": "completed",
+    "description": "Projet universitaire M1 IRS: simulation d'un serveur DNS et gestion complete de machines virtuelles dans un reseau interne.",
+    "tags": [
+      "Python",
+      "Bash",
+      "DNS",
+      "VLAN",
+      "Subnets",
+      "Virtual Machines",
+      "Network Automation",
+      "Monitoring"
+    ],
+    "details": "Developpement d'une application de simulation DNS avec recherche hierarchique d'adresses IP, gestion dynamique des sous-reseaux et des VLAN, automatisation des configurations/tests via scripts Bash et Python, puis validation automatisee des fonctionnalites et suivi des performances.",
+    "images": []
+  },
+  {
+    "id": 12,
+    "title": "Securisation et Supervision d'un Reseau Virtuel",
+    "duration": "Decembre 2025 - Janvier 2026",
+    "date": "2025",
+    "startDate": "2025-12",
+    "endDate": "2026-01",
+    "status": "completed",
+    "description": "Projet universitaire M2 IRS: conception d'un reseau virtuel complexe avec supervision, alerting et renforcement securite.",
+    "tags": [
+      "VirtualBox",
+      "Docker",
+      "VLAN",
+      "Firewall",
+      "Wireshark",
+      "Intrusion Detection",
+      "Monitoring",
+      "Security Hardening"
+    ],
+    "details": "Creation d'un reseau virtuel multi-VLAN et multi-sous-reseaux sur VirtualBox/Docker, mise en place de firewalls avances, surveillance trafic avec Wireshark et detection d'intrusions simples, supervision sous Docker avec generation automatique d'alertes en temps reel, puis recommandations de durcissement systeme et d'optimisation securite.",
+    "images": []
+  },
+  {
+    "id": 13,
+    "title": "Pipeline GitOps DevSecOps",
+    "duration": "Avril 2026",
+    "date": "2026",
+    "startDate": "2026-04",
+    "status": "completed",
+    "description": "Developpement et conteneurisation d'une API REST Node.js (Express), provisionnement AWS EC2 (k3s) avec Terraform, deploiement Kubernetes avec Helm, puis synchronisation GitOps avec ArgoCD.",
+    "tags": [
+      "Node.js",
+      "Express",
+      "Docker",
+      "Terraform",
+      "AWS",
+      "k3s",
+      "Kubernetes",
+      "Helm",
+      "GitOps",
+      "ArgoCD",
+      "GitLab CI",
+      "Semgrep",
+      "Trivy"
+    ],
+    "details": "Pipeline de bout en bout orientee DevSecOps: build Docker multi-stage, deploiement Kubernetes via Helm, et automatisation GitOps avec ArgoCD a chaque push Git. Une chaine de securite complete a ete integree dans GitLab CI avec SAST (Semgrep) et scan d'images (Trivy).",
+    "image": "assets/projects/project-gitlab-cicd-1.jpg",
+    "images": [
+      "assets/projects/project-gitlab-cicd-1.jpg",
+      "assets/projects/project-gitlab-cicd-2.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Pipeline DevSecOps et Observabilite",
+    "duration": "Mars 2026",
+    "date": "2026",
+    "startDate": "2026-03",
+    "status": "completed",
+    "description": "Creation d'un microservice Python (Flask) expose avec metriques systeme via psutil, automatise par GitLab CI, puis deploiement local (WSL2) avec supervision Prometheus/Grafana et alerting Telegram.",
+    "tags": [
+      "Python",
+      "Flask",
+      "psutil",
+      "GitLab CI",
+      "Docker",
+      "Trivy",
+      "WSL2",
+      "Prometheus",
+      "Grafana",
+      "Alertmanager",
+      "Telegram"
+    ],
+    "details": "Projet axe observabilite et securite: build et scan d'images Docker dans GitLab CI, deploiement automatise sur environnement local avec GitLab Runner, orchestration de la stack de monitoring et alerting temps reel sur Telegram.",
+    "image": "assets/projects/project-monitoring-1.jpg",
+    "images": [
+      "assets/projects/project-monitoring-1.jpg",
+      "assets/projects/project-monitoring-2.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Integration Active Directory et Nextcloud",
+    "duration": "Janvier 2026 - Fevrier 2026",
+    "date": "2026",
+    "startDate": "2026-01",
+    "endDate": "2026-02",
+    "status": "completed",
+    "description": "Conception d'une architecture multi-forets sous Windows Server 2025, deploiement Nextcloud sur Ubuntu 24.04, et authentification centralisee AD via LDAPS.",
+    "tags": [
+      "Active Directory",
+      "Windows Server",
+      "Ubuntu",
+      "Nextcloud",
+      "LDAPS",
+      "DNS",
+      "Failover"
+    ],
+    "details": "Mise en place de domaines enfants, RODC et relations d'approbation, puis integration de Nextcloud avec synchronisation automatique des groupes AD. Validation de la tolerance aux pannes (failover DC) et de la resolution DNS inter-domaines.",
+    "image": "assets/projects/project-kubernetes-1.jpg",
+    "images": [
+      "assets/projects/project-kubernetes-1.jpg",
+      "assets/projects/project-kubernetes-2.jpg"
+    ]
   }
 ]

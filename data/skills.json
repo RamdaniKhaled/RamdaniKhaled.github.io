@@ -29,6 +29,7 @@
         "items": [
           "Java",
           "Python",
+          "Bash scripting",
           "Programmation orientee objet (OOP)",
           "Conception objet et architecture logicielle",
           "Simulation client-serveur"
@@ -39,7 +40,11 @@
         "items": [
           "TCP/IP",
           "FTP",
+          "DNS",
+          "VLAN",
           "Analyse de protocoles reseau",
+          "Detection d'intrusions (bases)",
+          "Wireshark",
           "Cyber Threat Intelligence (CTI)",
           "Moderation de contenu assistee par IA",
           "Principes de securite applicative"
@@ -50,9 +55,34 @@
         "items": [
           "VMware",
           "Virtualisation",
+          "VirtualBox",
           "Containers",
+          "Docker",
+          "Monitoring et alerting automatises",
           "Notions 5G Core (NRF)",
           "Deploiement web sur Vercel"
+        ]
+      },
+      "cloud_devops": {
+        "title": "Cloud et DevOps",
+        "items": [
+          "Kubernetes (k3s/Minikube)",
+          "Helm",
+          "Terraform (AWS)",
+          "CI/CD (GitLab CI/CD)",
+          "GitOps (ArgoCD)",
+          "Semgrep",
+          "Trivy"
+        ]
+      },
+      "observability": {
+        "title": "Observabilite",
+        "items": [
+          "Prometheus",
+          "Grafana",
+          "Alertmanager",
+          "Telegram API",
+          "Monitoring"
         ]
       }
     }
@@ -74,6 +104,22 @@
           "Protocoles reseau avances et optimisation",
           "Cyber defense orientee renseignement de menace",
           "Comparaison pratique VM, conteneurs et orchestrateurs"
+        ]
+      },
+      "devsecops": {
+        "title": "DevSecOps avance",
+        "items": [
+          "Securite des pipelines CI/CD",
+          "Automatisation des controles SAST et image scanning",
+          "Bonnes pratiques GitOps en environnement production"
+        ]
+      },
+      "platform": {
+        "title": "Plateformes et exploitation",
+        "items": [
+          "Administration Kubernetes en contexte reel",
+          "Fiabilite des infrastructures hybrides Linux/Windows",
+          "Observabilite orientee alerting temps reel"
         ]
       }
     }
