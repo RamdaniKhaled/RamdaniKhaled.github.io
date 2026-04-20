@@ -5,19 +5,21 @@ let currentTagFilter = 'all';
 
 const PROJECT_FILTER_GROUPS = [
     { key: 'all', label: 'Tous' },
-    { key: 'web', label: 'Web' },
-    { key: 'backend', label: 'Backend & DB' },
-    { key: 'network', label: 'Reseaux & Protocoles' },
+    { key: 'cloud', label: 'Cloud' },
+    { key: 'devops', label: 'DevOps & GitOps' },
+    { key: 'observability', label: 'Observabilite' },
     { key: 'security', label: 'Securite' },
-    { key: 'systems', label: 'Systemes & Infra' }
+    { key: 'infra', label: 'Infrastructure' },
+    { key: 'identity', label: 'Identity & Systems' }
 ];
 
 const PROJECT_GROUP_TAGS = {
-    web: ['HTML', 'CSS', 'JavaScript', 'Next.js', 'E-commerce', 'UI/UX'],
-    backend: ['PHP', 'Node.js', 'TypeScript', 'SQL', 'Authentication', 'REST API', 'Database Design'],
-    network: ['TCP/IP', 'FTP', '5G Core', 'NRF', 'Simulation', 'Cyber Threat Intelligence'],
-    security: ['Security', 'AI Moderation', 'Content Moderation', 'Threat Analysis'],
-    systems: ['VMware', 'Virtualization', 'Containers', 'Linux', 'Python', 'Java']
+    cloud: ['AWS', 'k3s', 'Kubernetes', 'Terraform', 'Helm', 'Cloud'],
+    devops: ['GitLab CI', 'GitOps', 'ArgoCD', 'Terraform', 'Helm', 'Docker', 'Kubernetes', 'k3s', 'AWS'],
+    observability: ['Prometheus', 'Grafana', 'Alertmanager', 'Monitoring', 'Telegram', 'psutil'],
+    security: ['Semgrep', 'Trivy', 'Security', 'LDAPS', 'Failover', 'Firewall', 'Intrusion Detection'],
+    infra: ['Docker', 'Kubernetes', 'AWS', 'Windows Server', 'Ubuntu', 'VirtualBox', 'VMware', 'Containers'],
+    identity: ['Active Directory', 'LDAPS', 'Windows Server', 'Nextcloud', 'DNS']
 };
 
 const MONTHS_MAP = {

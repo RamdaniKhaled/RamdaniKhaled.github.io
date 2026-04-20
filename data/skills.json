@@ -17,7 +17,10 @@
         "items": [
           "PHP",
           "Node.js",
+          "Express.js",
           "TypeScript",
+          "Flask",
+          "psutil",
           "SQL",
           "Conception de base de donnees",
           "Authentification et gestion des roles",
@@ -58,6 +61,9 @@
           "VirtualBox",
           "Containers",
           "Docker",
+          "Windows Server 2025",
+          "Ubuntu 24.04",
+          "WSL2",
           "Monitoring et alerting automatises",
           "Notions 5G Core (NRF)",
           "Deploiement web sur Vercel"
@@ -66,6 +72,8 @@
       "cloud_devops": {
         "title": "Cloud et DevOps",
         "items": [
+          "AWS EC2",
+          "k3s",
           "Kubernetes (k3s/Minikube)",
           "Helm",
           "Terraform (AWS)",
@@ -78,11 +86,22 @@
       "observability": {
         "title": "Observabilite",
         "items": [
+          "Instrumentation metriques systeme",
           "Prometheus",
           "Grafana",
           "Alertmanager",
           "Telegram API",
           "Monitoring"
+        ]
+      },
+      "identity": {
+        "title": "Identity et Services d'Entreprise",
+        "items": [
+          "Active Directory multi-forets",
+          "RODC et relations d'approbation",
+          "LDAPS (port 636)",
+          "Synchronisation de groupes AD",
+          "Nextcloud"
         ]
       }
     }
