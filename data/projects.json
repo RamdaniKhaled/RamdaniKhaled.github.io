@@ -331,9 +331,9 @@
     ],
     "details": "PhoneXpert est un projet terrain concu pour repondre a des besoins concrets d'exploitation commerciale et technique. J'ai developpe une application web complete permettant de centraliser le suivi des ventes, de l'inventaire, des benefices, des pertes produits (pertes/casse/ecarts), des prets materiels et des notes de gestion. Une attention particuliere a ete apportee au module reparation: chaque appareil est suivi par numero de sequence, avec emission de billet client et suivi detaille de l'etat d'avancement jusqu'a la restitution. L'application s'appuie sur un acces cloud a la base de donnees, ce qui permet aux responsables de consulter les stocks et les indicateurs meme a distance, en dehors du magasin. La solution est actuellement utilisee par 2 magasins PhoneXpert a Tigzirt (Tizi Ouzou, Algerie), ce qui valide sa valeur operationnelle en production et sa capacite a fiabiliser les processus quotidiens.",
     "images": [
-      "assets/projects/project-phonexpert-1.jpg",
-      "assets/projects/project-phonexpert-2.jpg",
-      "assets/projects/project-phonexpert-3.jpg"
+      "assets/projects/phonexpert-1.png",
+      "assets/projects/phonexpert-2.png",
+      "assets/projects/phonexpert-3.png"
     ]
   }
 ]
