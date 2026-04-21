@@ -6,7 +6,7 @@
     "date": "2023",
     "startDate": "2023-03",
     "status": "completed",
-    "description": "Premier projet de developpement web realise en Licence 2: creation d'un site e-learning avec des sections e-commerce.",
+    "description": "Premier projet fondateur en Licence, axe e-learning et e-commerce, realise pour apprendre les bases du developpement web front-end.",
     "tags": [
       "HTML",
       "CSS",
@@ -14,24 +14,24 @@
       "E-commerce",
       "UI/UX"
     ],
-    "details": "Ce projet marque ma premiere introduction au developpement web. J'ai construit la structure front-end, organise les pages produit/contenu et compris les bases du responsive design et de l'interactivite en JavaScript.",
+    "details": "Ce projet a ete ma premiere vraie introduction au developpement web. J'y ai construit l'interface utilisateur avec HTML/CSS, implemente les interactions essentielles en JavaScript et structure les premieres pages de contenu/produit. L'objectif etait de comprendre les fondamentaux: manipulation du DOM, navigation entre pages, ergonomie de base et responsive design.",
     "images": []
   },
   {
     "id": 2,
     "title": "YouTube Clone (Personal Project)",
-    "duration": "Juin 2023",
+    "duration": "Juillet 2023",
     "date": "2023",
-    "startDate": "2023-06",
+    "startDate": "2023-07",
     "status": "completed",
-    "description": "Clone de YouTube en projet personnel pour consolider mes acquis front-end en HTML, CSS et JavaScript.",
+    "description": "Projet personnel realise pour consolider la maitrise du front-end (HTML, CSS, JavaScript) en reproduisant les composants principaux d'une interface type YouTube.",
     "tags": [
       "HTML",
       "CSS",
       "JavaScript",
       "Responsive Design"
     ],
-    "details": "Objectif principal: renforcer la maitrise du layout, de la mise en page dynamique et des interactions utilisateur. J'ai reproduit une interface type media platform pour progresser sur le design et la logique front-end.",
+    "details": "L'objectif principal etait de progresser sur la structure d'interfaces riches et sur la logique d'interaction utilisateur. J'ai travaille la mise en page responsive, l'organisation des sections media et la manipulation du DOM JavaScript pour simuler un comportement proche d'une vraie plateforme video.",
     "images": []
   },
   {
@@ -42,7 +42,7 @@
     "startDate": "2024-05",
     "endDate": "2024-06",
     "status": "completed",
-    "description": "Projet de groupe en Licence 3: application web pour la gestion des trajets, reservations, espace conducteur et administration complete.",
+    "description": "Conception d'une plateforme web robuste pour la gestion logistique d'une gare routiere, de la consultation des trajets a l'administration complete du systeme.",
     "tags": [
       "PHP",
       "SQL",
@@ -51,25 +51,32 @@
       "Reservation System",
       "Admin Dashboard"
     ],
-    "details": "J'ai pris en charge tout le backend et la base de donnees. Le systeme permettait de consulter les trajets par date, reserver des places, offrir un espace conducteur pour suivre les affectations et un espace admin pour gerer trajets, conducteurs et donnees metier.",
-    "images": []
+    "details": "Projet de groupe en L3 dans lequel j'ai pris en charge l'integralite de la logique back-end en PHP ainsi que la modelisation SQL. L'application integre un systeme de consultation de trajets par date, la reservation de places pour les longs trajets, une interface conducteur pour le planning quotidien, et un panel administrateur pour gerer trajets, conducteurs et ressources. Ce projet m'a permis de renforcer la conception de logique metier, la structuration des donnees relationnelles et la gestion des droits par profil utilisateur.",
+    "images": [
+      "assets/projects/gare1.png",
+      "assets/projects/gare2.png"
+    ]
   },
   {
     "id": 4,
     "title": "Jeu de Cartes Zheng Fen (Java)",
-    "duration": "Octobre 2024",
+    "duration": "Novembre 2024",
     "date": "2024",
-    "startDate": "2024-10",
+    "startDate": "2024-11",
     "status": "completed",
-    "description": "Projet Master 1 centre sur la conception objet en Java avec implementation du jeu de cartes Zheng Fen et ses regles specifiques.",
+    "description": "Application Java simulant le jeu de cartes Zheng Fen, avec un accent fort sur la conception orientee objet et la qualite d'architecture logicielle.",
     "tags": [
       "Java",
       "OOP",
       "Game Logic",
       "Software Design"
     ],
-    "details": "Le livrable insistait sur les choix de conception objet plutot que sur la seule fonctionnalite. Le projet m'a permis de structurer les classes, encapsuler les regles complexes et argumenter les decisions d'architecture logicielle.",
-    "images": []
+    "details": "Le projet etait centre sur la POO avancee: decomposition propre des responsabilites, extensibilite du code et argumentation technique des choix de conception. Les regles du jeu etant specifiques, j'ai porte une attention particuliere a la modelisation metier, a l'utilisation de patterns de conception adaptes et a la documentation des decisions d'architecture.",
+    "images": [
+      "assets/projects/card1.png",
+      "assets/projects/card2.png",
+      "assets/projects/card3.png"
+    ]
   },
   {
     "id": 5,
@@ -79,7 +86,7 @@
     "startDate": "2025-02",
     "endDate": "2025-03",
     "status": "completed",
-    "description": "Projet Master 1 en equipe: clone Twitter avec Node.js, Next.js et TypeScript, deploiement Vercel et volet securite avance.",
+    "description": "Developpement en equipe d'un reseau social complet base sur Next.js, Node.js et TypeScript, utilise comme laboratoire d'exploration technologique hebdomadaire.",
     "tags": [
       "Node.js",
       "Next.js",
@@ -88,8 +95,10 @@
       "AI Moderation",
       "Vercel"
     ],
-    "details": "Projet complet avec veille technologique hebdomadaire. Nous avons integre un module IA pour evaluer posts et images, et meme les messages prives selon un parametre activable par l'utilisateur. Le projet couvrait front-end, backend, securite et deploiement.",
-    "images": []
+    "details": "Ce projet M1 combinait architecture applicative, securite et deploiement. En plus des fonctionnalites classiques d'un reseau social, nous avons implemente un modele d'IA pour la moderation automatique des posts et images. Innovation cle: une option de filtrage IA des messages prives, activable par l'utilisateur. La plateforme etait deployee sur Vercel, avec un flux de livraison continue pour iterer rapidement et stabiliser les evolutions fonctionnelles.",
+    "images": [
+      "assets/projects/twist.png"
+    ]
   },
   {
     "id": 6,
@@ -98,14 +107,14 @@
     "date": "2025",
     "startDate": "2025-04",
     "status": "completed",
-    "description": "Projet Master 1 en Python: simulation detaillee du protocole TCP/IP avec communication reseau reelle.",
+    "description": "Developpement en Python d'un simulateur de pile TCP/IP visant a reproduire fidelement les mecanismes de bas niveau sur une connexion reseau reelle.",
     "tags": [
       "Python",
       "TCP/IP",
       "Networking",
       "Protocol Simulation"
     ],
-    "details": "Le travail reproduisait le comportement du protocole avec une logique proche d'un scenario reel. Cela a renforce ma comprehension des couches reseau, des echanges de paquets et des mecanismes de communication fiable.",
+    "details": "Le simulateur reproduit les notions d'encapsulation, d'acquittement et de controle de flux afin d'observer finement le comportement des paquets. Ce projet m'a permis d'approfondir la comprehension des couches reseau et de verifier experimentalement des concepts theoriques TCP/IP dans un contexte proche du reel.",
     "images": []
   },
   {
@@ -115,14 +124,14 @@
     "date": "2025",
     "startDate": "2025-12",
     "status": "completed",
-    "description": "Projet Master 2: presentation technique de la fonction NRF (Network Repository Function) dans l'architecture 5G Core.",
+    "description": "Projet academique de veille technique sur la fonction NRF (Network Repository Function) au sein du coeur 5G.",
     "tags": [
       "5G Core",
       "NRF",
       "Network Architecture",
       "Technical Presentation"
     ],
-    "details": "Analyse du role de la NRF dans le coeur 5G, de ses interactions avec les autres fonctions et des enjeux de decouverte de services dans les architectures telecom modernes.",
+    "details": "Cette etude portait sur le role de la NRF dans la decouverte des services reseau 5G, ses interactions avec les autres fonctions du core et les enjeux d'orchestration dans les architectures telecom modernes.",
     "images": []
   },
   {
@@ -132,14 +141,14 @@
     "date": "2026",
     "startDate": "2026-01",
     "status": "completed",
-    "description": "Projet Master 2: etude comparee entre virtualisation classique (VMware) et approche conteneurs.",
+    "description": "Etude comparative academique entre virtualisation classique (VMware) et conteneurisation moderne.",
     "tags": [
       "VMware",
       "Virtualization",
       "Containers",
       "Infrastructure"
     ],
-    "details": "La presentation comparait performances, isolation, cout operationnel et cas d'usage entre machines virtuelles et conteneurs, avec un angle architecture d'infrastructure.",
+    "details": "Le travail comparait les deux approches sous l'angle performances, isolation, empreinte ressources, flexiblite de deploiement et cas d'usage operationnels. L'objectif etait d'etablir des recommandations claires selon les contraintes d'infrastructure.",
     "images": []
   },
   {
@@ -149,14 +158,14 @@
     "date": "2026",
     "startDate": "2026-02",
     "status": "completed",
-    "description": "Projet Master 2 avec presentation sur la Cyber Threat Intelligence et l'exploitation des informations de menace.",
+    "description": "Projet de recherche et presentation sur la Cyber Threat Intelligence (CTI), avec focus sur la detection proactive des menaces.",
     "tags": [
       "Cyber Threat Intelligence",
       "Threat Analysis",
       "Security",
       "Presentation"
     ],
-    "details": "Travail axe sur la collecte, la qualification et l'utilisation d'indicateurs de compromission pour une meilleure anticipation des risques cyber.",
+    "details": "Analyse des strategies de CTI, des vecteurs d'attaque et des approches de collecte/qualification d'indicateurs de compromission. Le projet mettait l'accent sur l'exploitation operationnelle du renseignement pour anticiper les risques et renforcer la posture de securite.",
     "images": []
   },
   {
@@ -166,7 +175,7 @@
     "date": "2026",
     "startDate": "2026-03",
     "status": "completed",
-    "description": "Projet Master 2: developpement d'un programme Python jouant le role de serveur et client FTP pour upload/download de fichiers.",
+    "description": "Developpement d'un outil Python de simulation FTP pour reproduire les interactions client-serveur d'upload et de download.",
     "tags": [
       "Python",
       "FTP",
@@ -174,7 +183,7 @@
       "File Transfer",
       "Client-Server"
     ],
-    "details": "Simulation complete des operations d'envoi et de reception de fichiers entre client et serveur, avec gestion de la connexion et des commandes de transfert.",
+    "details": "Le projet implante les mecanismes de transfert de fichiers via sockets et simule les commandes principales d'un echange FTP. Il met en avant la gestion de session, les echanges client-serveur et la robustesse des transferts de donnees.",
     "images": []
   },
   {
@@ -185,7 +194,7 @@
     "startDate": "2025-04",
     "endDate": "2025-05",
     "status": "completed",
-    "description": "Projet universitaire M1 IRS: simulation d'un serveur DNS et gestion complete de machines virtuelles dans un reseau interne.",
+    "description": "Projet universitaire M1 IRS centre sur la simulation d'un serveur DNS et la gestion automatisee d'un laboratoire reseau compose de machines virtuelles, sous-reseaux et VLAN.",
     "tags": [
       "Python",
       "Bash",
@@ -196,7 +205,7 @@
       "Network Automation",
       "Monitoring"
     ],
-    "details": "Developpement d'une application de simulation DNS avec recherche hierarchique d'adresses IP, gestion dynamique des sous-reseaux et des VLAN, automatisation des configurations/tests via scripts Bash et Python, puis validation automatisee des fonctionnalites et suivi des performances.",
+    "details": "L'objectif etait de reproduire un comportement DNS realiste avec resolution hierarchique des noms/IP, tout en automatisant l'administration reseau. Le projet couvre la gestion dynamique de sous-reseaux, la segmentation VLAN, l'orchestration des configurations via Bash/Python et la verification automatisee des fonctionnalites. Une couche de monitoring et de tests scripts permettait de suivre les performances et de detecter rapidement les anomalies.",
     "images": []
   },
   {
@@ -207,7 +216,7 @@
     "startDate": "2025-12",
     "endDate": "2026-01",
     "status": "completed",
-    "description": "Projet universitaire M2 IRS: conception d'un reseau virtuel complexe avec supervision, alerting et renforcement securite.",
+    "description": "Projet universitaire M2 IRS dedie a la securisation et a la supervision d'une infrastructure reseau virtuelle complexe (VirtualBox/Docker) avec defense en profondeur.",
     "tags": [
       "VirtualBox",
       "Docker",
@@ -218,7 +227,7 @@
       "Monitoring",
       "Security Hardening"
     ],
-    "details": "Creation d'un reseau virtuel multi-VLAN et multi-sous-reseaux sur VirtualBox/Docker, mise en place de firewalls avances, surveillance trafic avec Wireshark et detection d'intrusions simples, supervision sous Docker avec generation automatique d'alertes en temps reel, puis recommandations de durcissement systeme et d'optimisation securite.",
+    "details": "Le projet comprenait la creation d'un reseau multi-VLAN/multi-sous-reseaux, la mise en place de firewalls avances et la surveillance du trafic via Wireshark. Des mecanismes simples de detection d'intrusion ont ete ajoutes, puis une couche de supervision sous Docker a ete deployee avec alerting temps reel. La phase finale etait orientee recommandations: durcissement systeme, reduction de surface d'attaque et optimisation des regles de segmentation/securite.",
     "images": []
   },
   {
@@ -227,8 +236,8 @@
     "duration": "Avril 2026",
     "date": "2026",
     "startDate": "2026-04",
-    "status": "completed",
-    "description": "Developpement et conteneurisation d'une API REST Node.js (Express), provisionnement AWS EC2 (k3s) avec Terraform, deploiement Kubernetes avec Helm, puis synchronisation GitOps avec ArgoCD.",
+    "status": "en cours",
+    "description": "Conception et mise en oeuvre d'une architecture Cloud Native de bout en bout pour une API REST Node.js (Express), illustrant une maitrise complete du cycle de vie logiciel moderne.",
     "tags": [
       "Node.js",
       "Express",
@@ -244,11 +253,9 @@
       "Semgrep",
       "Trivy"
     ],
-    "details": "Pipeline de bout en bout orientee DevSecOps: build Docker multi-stage, deploiement Kubernetes via Helm, et automatisation GitOps avec ArgoCD a chaque push Git. Une chaine de securite complete a ete integree dans GitLab CI avec SAST (Semgrep) et scan d'images (Trivy).",
+    "details": "Le projet couvre l'ensemble de la chaine SDLC: creation d'images Docker optimisees via des builds multi-stage, provisionnement automatise d'une infrastructure AWS (EC2) hebergeant un cluster k3s avec Terraform, puis deploiement Kubernetes via Helm. La partie GitOps est assuree par ArgoCD pour maintenir la synchronisation automatique entre depot Git et etat reel du cluster. Cote securite, une chaine de confiance a ete integree dans GitLab CI avec analyse statique SAST (Semgrep) et scan de vulnerabilites des images (Trivy) avant toute livraison.",
     "image": "assets/projects/project-gitlab-cicd-1.jpg",
     "images": [
-      "assets/projects/project-gitlab-cicd-1.jpg",
-      "assets/projects/project-gitlab-cicd-2.jpg"
     ]
   },
   {
@@ -258,7 +265,7 @@
     "date": "2026",
     "startDate": "2026-03",
     "status": "completed",
-    "description": "Creation d'un microservice Python (Flask) expose avec metriques systeme via psutil, automatise par GitLab CI, puis deploiement local (WSL2) avec supervision Prometheus/Grafana et alerting Telegram.",
+    "description": "Developpement d'un microservice Python (Flask) dedie a l'exposition de metriques systeme via psutil, avec automatisation CI/CD et supervision temps reel.",
     "tags": [
       "Python",
       "Flask",
@@ -272,11 +279,11 @@
       "Alertmanager",
       "Telegram"
     ],
-    "details": "Projet axe observabilite et securite: build et scan d'images Docker dans GitLab CI, deploiement automatise sur environnement local avec GitLab Runner, orchestration de la stack de monitoring et alerting temps reel sur Telegram.",
+    "details": "La chaine CI/CD repose sur GitLab Runner configure sous WSL2 afin d'automatiser tests et builds Docker. Une stack d'observabilite complete (Prometheus/Grafana) est deployee via Docker Compose pour centraliser la collecte et la visualisation des metriques. Alertmanager est configure pour declencher des notifications critiques en temps reel via l'API Telegram. Ce projet relie securite, exploitation et monitoring dans une approche DevSecOps orientee fiabilite.",
     "image": "assets/projects/project-monitoring-1.jpg",
     "images": [
-      "assets/projects/project-monitoring-1.jpg",
-      "assets/projects/project-monitoring-2.jpg"
+      "assets/projects/pipe1.png",
+      "assets/projects/pipe2.png"
     ]
   },
   {
@@ -287,7 +294,7 @@
     "startDate": "2026-01",
     "endDate": "2026-02",
     "status": "completed",
-    "description": "Conception d'une architecture multi-forets sous Windows Server 2025, deploiement Nextcloud sur Ubuntu 24.04, et authentification centralisee AD via LDAPS.",
+    "description": "Realisation d'une infrastructure hybride complexe visant a centraliser la gestion des identites et des fichiers autour d'un annuaire Active Directory et d'un service Nextcloud.",
     "tags": [
       "Active Directory",
       "Windows Server",
@@ -297,11 +304,36 @@
       "DNS",
       "Failover"
     ],
-    "details": "Mise en place de domaines enfants, RODC et relations d'approbation, puis integration de Nextcloud avec synchronisation automatique des groupes AD. Validation de la tolerance aux pannes (failover DC) et de la resolution DNS inter-domaines.",
+    "details": "Le projet inclut la mise en place d'une architecture Windows Server 2025 multi-forets avec domaines enfants, RODC et relations d'approbation. Nextcloud est deploie sur Ubuntu 24.04 avec une base dediee, puis integre a l'AD via LDAPS (port 636) pour l'authentification centralisee et la synchronisation des groupes. La robustesse de la solution a ete validee par des tests de haute disponibilite (failover DC) et des verifications de resolution DNS inter-domaines.",
     "image": "assets/projects/project-kubernetes-1.jpg",
     "images": [
-      "assets/projects/project-kubernetes-1.jpg",
-      "assets/projects/project-kubernetes-2.jpg"
+      "assets/projects/ad1.png",
+      "assets/projects/ad2.png"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "PhoneXpert - Gestion Magasin & Reparation(Tigzirt Tizi Ouzou)",
+    "duration": "Juillet 2025",
+    "date": "2025",
+    "startDate": "2025-07",
+    "status": "completed",
+    "description": "Developpement d'une plateforme web metier en PHP et JavaScript pour un magasin de telephones/reparation a Tigzirt (Tizi Ouzou), aujourd'hui utilisee en conditions reelles par deux magasins PhoneXpert.",
+    "tags": [
+      "PHP",
+      "JavaScript",
+      "SQL",
+      "Cloud Database Access",
+      "Inventory Management",
+      "Sales Tracking",
+      "Repair Workflow",
+      "Business Dashboard"
+    ],
+    "details": "PhoneXpert est un projet terrain concu pour repondre a des besoins concrets d'exploitation commerciale et technique. J'ai developpe une application web complete permettant de centraliser le suivi des ventes, de l'inventaire, des benefices, des pertes produits (pertes/casse/ecarts), des prets materiels et des notes de gestion. Une attention particuliere a ete apportee au module reparation: chaque appareil est suivi par numero de sequence, avec emission de billet client et suivi detaille de l'etat d'avancement jusqu'a la restitution. L'application s'appuie sur un acces cloud a la base de donnees, ce qui permet aux responsables de consulter les stocks et les indicateurs meme a distance, en dehors du magasin. La solution est actuellement utilisee par 2 magasins PhoneXpert a Tigzirt (Tizi Ouzou, Algerie), ce qui valide sa valeur operationnelle en production et sa capacite a fiabiliser les processus quotidiens.",
+    "images": [
+      "assets/projects/project-phonexpert-1.jpg",
+      "assets/projects/project-phonexpert-2.jpg",
+      "assets/projects/project-phonexpert-3.jpg"
     ]
   }
 ]

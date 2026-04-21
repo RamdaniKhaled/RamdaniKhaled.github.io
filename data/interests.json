@@ -1,8 +1,8 @@
 {
   "intro": {
     "kicker": "Ce Qui M'Anime",
-    "title": "Interets Techniques",
-    "description": "Mes centres d'interet se concentrent sur l'administration systeme, l'automatisation, la securisation et l'exploitation fiable des infrastructures modernes."
+    "title": "Interets Techniques et Personnels",
+    "description": "Mes centres d'interet couvrent autant la tech (systemes, automatisation, securite, observabilite) que des passions personnelles qui me motivent au quotidien."
   },
   "items": [
     {
@@ -34,6 +34,16 @@
       "title": "Systemes hybrides",
       "description": "Combiner environnements Windows Server et Linux avec annuaire, authentification centralisee et tests de resilience.",
       "tags": ["Active Directory", "LDAPS", "Nextcloud"]
+    },
+    {
+      "title": "Echecs",
+      "description": "Je suis un grand passionne d'echecs pendant mon temps libre. Je suis autour de 1600 Elo sur Chess.com et je regrette de ne pas avoir commence beaucoup plus tot.",
+      "tags": ["Echecs", "Strategie", "Chess.com"]
+    },
+    {
+      "title": "Football",
+      "description": "Je suis un enorme supporter du FC Barcelone. Meme le theme visuel de ce site est inspire des couleurs et de l'identite du Barça.",
+      "tags": ["Football", "FC Barcelone", "Passion"]
     }
   ]
 }
