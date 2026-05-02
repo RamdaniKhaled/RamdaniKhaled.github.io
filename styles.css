@@ -1372,12 +1372,73 @@ h2::after {
 .modal-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
+    cursor: zoom-in;
 }
 
 .modal-image:hover img {
     transform: scale(1.05);
+}
+
+/* IMAGE LIGHTBOX */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 8, 22, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 2100;
+}
+
+.image-lightbox.active {
+    display: flex;
+}
+
+.image-lightbox img {
+    max-width: min(92vw, 1200px);
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(15, 23, 42, 0.75);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+
+.image-lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-light);
+    font-size: 0.95em;
+    text-align: center;
+    max-width: 80ch;
+}
+
+.image-lightbox-close {
+    align-self: flex-end;
+    margin-bottom: 16px;
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    color: #f1f5f9;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.6em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.image-lightbox-close:hover {
+    transform: rotate(90deg);
+    border-color: rgba(129, 140, 248, 0.8);
+    background: rgba(30, 41, 59, 1);
 }
 
 .modal-details {
@@ -2261,6 +2322,7 @@ footer a:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: zoom-in;
 }
 
 .project-detail-card:hover .project-image img {

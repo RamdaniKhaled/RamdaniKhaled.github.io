@@ -473,6 +473,69 @@ function closeProjectModal() {
     }
 }
 
+function setupImageLightbox() {
+    const lightboxId = 'imageLightbox';
+    let lightbox = document.getElementById(lightboxId);
+
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = lightboxId;
+        lightbox.className = 'image-lightbox';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.innerHTML = `
+            <button type="button" class="image-lightbox-close" aria-label="Fermer l'image">&times;</button>
+            <img src="" alt="">
+            <p class="image-lightbox-caption"></p>
+        `;
+        document.body.appendChild(lightbox);
+    }
+
+    const closeButton = lightbox.querySelector('.image-lightbox-close');
+    const image = lightbox.querySelector('img');
+    const caption = lightbox.querySelector('.image-lightbox-caption');
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        if (image) image.src = '';
+        if (image) image.alt = '';
+        if (caption) caption.textContent = '';
+    };
+
+    const openLightbox = (src, altText) => {
+        if (!image) return;
+        image.src = src;
+        image.alt = altText || '';
+        if (caption) caption.textContent = altText || '';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+    };
+
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLImageElement)) return;
+        if (!target.closest('.modal-image, .project-image')) return;
+        event.preventDefault();
+        openLightbox(target.currentSrc || target.src, target.alt);
+    });
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeLightbox);
+    }
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+}
+
 // Setup sort buttons
 function setupProjectSorting() {
     const newestBtn = document.getElementById('sortNewest');
@@ -693,6 +756,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupProjectSorting();
     setupProjectFilters();
     setupModalClosing();
+    setupImageLightbox();
     setupRevealAnimations();
     setupCvInlinePreview();
     setupSkillsWowHover();
