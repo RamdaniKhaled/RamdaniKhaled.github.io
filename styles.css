@@ -299,14 +299,6 @@ nav a.nav-active::after {
     margin-bottom: 20px;
 }
 
-.hero-pill::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #34d399;
-    box-shadow: 0 0 0 5px rgba(52, 211, 153, 0.16);
-}
 
 .hero-title {
     font-family: 'Space Grotesk', 'Manrope', sans-serif;
